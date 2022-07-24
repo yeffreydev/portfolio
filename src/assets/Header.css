@@ -20,6 +20,7 @@
 #cv-link {
   padding: 0 10px;
   background-color: #def;
+  border: 1px solid #aff;
   margin-right: 10px;
 }
 #cv-link a {

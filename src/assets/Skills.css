@@ -1,2 +1,41 @@
 #skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-head {
+  height: 70px;
+  display: flex;
+}
+.skills-head h3 {
+  color: #def;
+  margin: auto;
+}
+
+.skills-contain {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-around;
+}
+.container-skills-1,
+.container-skills-2,
+.container-skills-3 {
+  display: flex;
+  justify-content: center;
+}
+
+.skill-item {
+  border: 2px solid #aff;
+  background-color: #345;
+  min-height: 70px;
+  color: #def;
+  font-weight: bolder;
+  margin: 5px;
+  margin-left: 20px;
+  min-width: 200px;
+  display: flex;
+}
+.skill-item span {
+  margin: auto;
 }

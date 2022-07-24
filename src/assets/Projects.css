@@ -1,2 +1,36 @@
 #projects {
+  display: flex;
+  flex-direction: column;
+}
+.projects-head {
+  height: 90px;
+  display: flex;
+}
+.projects-head h3 {
+  font-size: 40px;
+  margin: auto;
+  color: #def;
+}
+.projects-contain-carousel {
+  margin: auto;
+  border: 2px solid #aff;
+  overflow-x: scroll;
+  display: flex;
+  background-color: #123;
+  width: 100%;
+  padding: 50px 50px;
+}
+.projects-contain-carousel::-webkit-scrollbar {
+  display: none;
+}
+.project-item {
+  background-color: #def5;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 300px;
+  border: 2px solid #aff;
+  margin-left: 50px;
+}
+.project-item:first-child {
+  margin-left: 0;
 }

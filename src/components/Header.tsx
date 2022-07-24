@@ -6,9 +6,9 @@ const Header = () => {
   return (
     <div className="header-container">
       <header id="header">
-        <a id="logo" href="#about_me">
+        <Link id="logo" reloadDocument to="/#about_me">
           <span>My Logo</span>
-        </a>
+        </Link>
         <Navbar />
         <div id="cv-link">
           <Link to="/cv">download cv</Link>

@@ -27,9 +27,6 @@ const AboutMe = () => {
           </p>
         </div>
       </div>
-      <div className="about_me-footer">
-        <a href="#skills">Go To Skills</a>
-      </div>
     </div>
   );
 };
