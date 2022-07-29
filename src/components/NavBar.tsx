@@ -5,24 +5,13 @@ const Navbar = () => {
   return (
     <ul id="navbar">
       <li>
-        <Link reloadDocument to="/#about_me">
-          About Me
-        </Link>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <Link reloadDocument to="/#skills">
-          Skills
-        </Link>
+        <Link to="/about">About</Link>
       </li>
       <li>
-        <Link reloadDocument to="/#projects">
-          Projects
-        </Link>
-      </li>
-      <li>
-        <Link reloadDocument to="/#contact_me">
-          Contact Me
-        </Link>
+        <Link to="/projects">Projects</Link>
       </li>
     </ul>
   );

@@ -22,7 +22,7 @@
 .container-skills-2,
 .container-skills-3 {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .skill-item {

@@ -22,18 +22,24 @@ code {
 
 @media screen and (min-width: 700px) {
   :root {
-    --width-content: 90%;
+    --width-content: 95%;
   }
 }
 
 @media screen and (min-width: 900px) {
   :root {
-    --width-content: 80%;
+    --width-content: 90%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   :root {
-    --width-content: 75%;
+    --width-content: 85%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  :root {
+    --width-content: 80%;
   }
 }

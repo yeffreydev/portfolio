@@ -5,6 +5,10 @@
   position: relative;
   width: 100%;
   height: calc(100vh - 50px);
+  background-image: url(./assets/svg/pre.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #234;
 }
 .main-container {
   position: relative;
@@ -18,11 +22,11 @@
   width: var(--width-content);
 }
 .scroll-y {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
-.scroll-y::-webkit-scrollbar {
+/* .scroll-y::-webkit-scrollbar {
   display: none;
-}
+} */
 @media screen and (min-width: 900px) {
   .main-container {
     height: calc(100vh - 50px);

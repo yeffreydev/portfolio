@@ -28,25 +28,6 @@ const ContactMe = () => {
           </div>
         </div>
       </div>
-      <div className="contact_me-form-container">
-        <form className="contact_me-form" action="">
-          <h3 className="contact_me-form-title">Send Me A Message</h3>
-          <input
-            className="contact_me-form-inputname"
-            placeholder="Your Name"
-            type="text"
-          />
-          <textarea
-            className="contact_me-form-inputmessage"
-            placeholder="Message"
-          />
-          <input
-            className="contact_me-form-inputsubmit"
-            type="submit"
-            value="send"
-          />
-        </form>
-      </div>
     </div>
   );
 };

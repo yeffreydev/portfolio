@@ -6,12 +6,12 @@ const Header = () => {
   return (
     <div className="header-container">
       <header id="header">
-        <Link id="logo" reloadDocument to="/#about_me">
-          <span>My Logo</span>
+        <Link id="logo" to="/">
+          <span>Y.E.</span>
         </Link>
         <Navbar />
         <div id="cv-link">
-          <Link to="/cv">download cv</Link>
+          <Link to="/resume">my resume</Link>
         </div>
       </header>
     </div>
