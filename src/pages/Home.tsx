@@ -2,6 +2,8 @@ import React from "react";
 import "./../assets/css/Home.css";
 import Type from "../components/Type";
 import imageProfile from "./../assets/svg/portfoliohomeprofile.svg";
+import HomeAbout from "../components/HomeAbout";
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div className="main scroll-y">
@@ -21,6 +23,8 @@ const Home = () => {
           <img src={imageProfile} alt="" />
         </div>
       </div>
+      <HomeAbout />
+      <Footer />
     </div>
   );
 };

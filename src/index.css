@@ -17,6 +17,7 @@ code {
 }
 
 :root {
+  --tablet-max-width: 768px;
   --width-content: 100%;
 }
 
