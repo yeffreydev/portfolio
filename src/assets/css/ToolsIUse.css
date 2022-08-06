@@ -18,7 +18,26 @@
 }
 .tool-item {
   border: 1px solid #5ff;
-  margin: 50px;
-  min-width: 150px;
-  min-height: 100px;
+  border-radius: 5px;
+  margin: 25px;
+  min-width: 200px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+.tool-item .tool-icon {
+  flex: 1;
+  display: flex;
+}
+.tool-item .tool-icon svg {
+  margin: auto;
+  color: #def;
+  font-size: 100px;
+}
+.tool-item .tool-name {
+  flex: 0.3;
+  display: flex;
+  color: #abc;
+  justify-content: center;
+  align-items: center;
 }

@@ -7,7 +7,7 @@ import ToolsIuse from "../components/ToolsIuse";
 import DaysICode from "../components/DaysICode";
 const AboutMe = () => {
   return (
-    <div id="about_me" className="main scroll-y">
+    <div className="main scroll-y">
       <div className="main-content">
         <AboutFirst />
         <Skillset />
