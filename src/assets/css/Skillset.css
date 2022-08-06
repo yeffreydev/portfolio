@@ -1,0 +1,51 @@
+.skillset {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.skillset h1 {
+  color: #def;
+  text-align: center;
+}
+.skillset h1 span {
+  color: #5ff;
+  text-align: center;
+}
+
+.skillset .skills {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item-skill {
+  border: 1px solid #5ff;
+  border-radius: 5px;
+  width: 200px;
+  height: 150px;
+  margin: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.item-skill .item-icon {
+  flex: 1;
+  display: flex;
+}
+.item-skill .item-icon svg {
+  margin: auto;
+  color: #def;
+  font-size: 100px;
+}
+.item-skill .item-name {
+  flex: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-skill .item-name span {
+  color: #abc;
+  font-weight: bold;
+}

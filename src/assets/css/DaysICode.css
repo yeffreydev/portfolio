@@ -1,0 +1,19 @@
+.days-i-code {
+  display: flex;
+  flex-direction: column;
+}
+.days-i-code h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #def;
+}
+.days-i-code h1 span {
+  color: #5ff;
+}
+
+.code-contributions {
+  min-height: 200px;
+  margin-top: 20px;
+  border: 1px solid #4ff;
+  margin-bottom: 100px;
+}

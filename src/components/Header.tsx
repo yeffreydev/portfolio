@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./NavBar";
 import "./../assets/Header.css";
+import { CgFileDocument } from "react-icons/cg";
+
 const Header = () => {
   return (
     <div className="header-container">
@@ -11,6 +13,7 @@ const Header = () => {
         </Link>
         <Navbar />
         <div id="cv-link">
+          <CgFileDocument />
           <Link to="/resume">my resume</Link>
         </div>
       </header>
