@@ -1,6 +1,6 @@
 import React from "react";
 import "./../assets/css/HomeAbout.css";
-import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import imageProfile from "./../assets/svg/p.svg";
 function HomeAbout() {
   return (
@@ -47,13 +47,16 @@ function HomeAbout() {
           <h2>FIND ME ON</h2>
           <p>Feel free to connect with me</p>
           <div className="links">
-            <a href="https://www.facebook.com/" target={"_blank"}>
-              <FaFacebook />
+            <a href="https://github.com/yeffreycode" target={"_blank"}>
+              <FaGithub />
             </a>
             <a href="https://www.instagram.com/yeffrey404" target={"_blank"}>
               <FaInstagram />
             </a>
-            <a href="https://www.githbu" target={"_blank"}>
+            <a
+              href="https://www.linkedin.com/in/yeffrey-espinoza-074227246/"
+              target={"_blank"}
+            >
               <FaLinkedin />
             </a>
           </div>

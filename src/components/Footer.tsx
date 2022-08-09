@@ -1,7 +1,7 @@
 import React from "react";
 import "./../assets/css/Footer.css";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -15,10 +15,10 @@ const Footer = () => {
           <FaInstagram />
         </a>
         <a
-          href="https://www.facebook.com/profile.php?id=100083572955867"
+          href="https://www.linkedin.com/in/yeffrey-espinoza-074227246/"
           target={"_blank"}
         >
-          <FaFacebook />
+          <FaLinkedin />
         </a>
       </div>
     </div>
