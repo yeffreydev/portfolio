@@ -57,9 +57,11 @@
   display: flex;
 }
 .about-first-left .img {
-  border: 2px solid #5ff;
   margin: auto;
   width: 90%;
   min-height: 300px;
   height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

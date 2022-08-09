@@ -41,6 +41,11 @@
   margin: 10px auto;
   width: 95%;
   background-color: #123;
+  position: relative;
+}
+.project-photo img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .project-name {

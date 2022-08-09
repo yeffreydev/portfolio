@@ -1,5 +1,6 @@
 import React from "react";
 import "./../assets/css/AboutFirst.css";
+import imgDesktop from "./../assets/svg/dsvgp.svg";
 import { ImPointRight } from "react-icons/im";
 function AboutFirst() {
   return (
@@ -37,7 +38,9 @@ function AboutFirst() {
         </div>
       </div>
       <div className="about-first-left">
-        <div className="img"></div>
+        <div className="img">
+          <img src={imgDesktop} alt="img desktop" />
+        </div>
       </div>
     </div>
   );
