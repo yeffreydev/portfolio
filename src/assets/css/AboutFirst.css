@@ -1,7 +1,9 @@
 .about-first {
   min-height: 500px;
   display: flex;
+  flex-direction: column;
 }
+
 .about-first-right {
   display: flex;
   flex: 1;
@@ -64,4 +66,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  .about-first {
+    flex-direction: row;
+  }
 }

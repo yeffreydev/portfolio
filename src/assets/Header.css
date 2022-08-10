@@ -1,5 +1,6 @@
 .header-container {
   width: 100%;
+  border-bottom: 1px solid #456;
   height: 50px;
   background-color: #123;
   display: flex;
@@ -26,4 +27,34 @@
 #cv-link a {
   text-decoration: none;
   color: #123;
+}
+.navbar-container {
+  flex: 1;
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .navbar-container {
+    display: flex;
+  }
+  .navbar-transparent {
+    display: none;
+  }
+  .navbar-icon {
+    display: none;
+  }
+  .navbar-mobile {
+    display: none;
+  }
+}
+.navbar-transparent {
+  flex: 1;
+}
+.navbar-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 2px;
+}
+.navbar-icon > * {
+  color: #5ff;
 }

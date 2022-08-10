@@ -6,23 +6,29 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-const Navbar = () => {
+const Navbar = ({
+  onClickLeft,
+  isOpen,
+}: {
+  onClickLeft: () => void;
+  isOpen: boolean;
+}) => {
   return (
-    <ul id="navbar">
+    <ul className={isOpen ? "navbar-active navbar" : "navbar"}>
       <li>
-        <Link to="/">
+        <Link to="/" onClick={onClickLeft}>
           <AiOutlineHome />
           Home
         </Link>
       </li>
       <li>
-        <Link to="/about">
+        <Link to="/about" onClick={onClickLeft}>
           <AiOutlineUser />
           About
         </Link>
       </li>
       <li>
-        <Link to="/projects">
+        <Link to="/projects" onClick={onClickLeft}>
           <AiOutlineFundProjectionScreen />
           Projects
         </Link>
