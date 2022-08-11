@@ -24,9 +24,7 @@
 .scroll-y {
   overflow-y: auto;
 }
-/* .scroll-y::-webkit-scrollbar {
-  display: none;
-} */
+
 @media screen and (min-width: 900px) {
   .main-container {
     height: calc(100vh - 50px);
