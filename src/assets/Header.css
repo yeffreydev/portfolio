@@ -1,15 +1,7 @@
-.header-container {
-  width: 100%;
-  border-bottom: 1px solid #456;
-  height: 50px;
-  background-color: #123;
+header {
   display: flex;
-}
-#header {
-  display: flex;
-  margin: auto;
-  width: var(--width-content);
-  height: 50px;
+  background-color: #000;
+  height: 60px;
   align-items: center;
 }
 
