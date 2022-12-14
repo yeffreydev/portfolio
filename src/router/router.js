@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import Resume from "../pages/Resume";
 import About from "../pages/About";
-
+import Error from "../pages/Error";
 const Router = () => {
   return (
     <div>
@@ -16,6 +16,7 @@ const Router = () => {
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
     </div>
   );

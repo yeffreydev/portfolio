@@ -1,14 +1,30 @@
-header {
+.header {
   display: flex;
-  background-color: #000;
-  height: 60px;
+  width: 80%;
+  height: 100%;
+  margin: auto;
   align-items: center;
 }
 
 #logo {
   text-decoration: none;
   padding: 0 10px;
-  color: #def;
+  color: #000;
+  text-shadow: 0.5px 1px 0px #7ff;
+  font-weight: bold;
+  animation: logoanimation 2s linear infinite forwards alternate;
+}
+@keyframes logoanimation {
+  0% {
+    scale: 1;
+    color: #000;
+    text-shadow: 0.5px 1px 0px #7ff;
+  }
+  100% {
+    scale: 1.5;
+    color: #7ff;
+    text-shadow: 0.5px 1px 0px #000;
+  }
 }
 #cv-link {
   padding: 0 10px;

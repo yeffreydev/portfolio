@@ -5,11 +5,13 @@ import "./../assets/Header.css";
 
 const Header = () => {
   return (
-    <header>
-      <Link id="logo" to="/">
-        <span>Y.E.</span>
-      </Link>
-      <Navbar />
+    <header className="header-container">
+      <div className="header">
+        <Link id="logo" to="/">
+          <span>Y.E.</span>
+        </Link>
+        <Navbar />
+      </div>
     </header>
   );
 };
