@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  width: 80%;
+  width: 90%;
   height: 100%;
   margin: auto;
   align-items: center;
@@ -10,18 +10,17 @@
   text-decoration: none;
   padding: 0 10px;
   color: #000;
+  font-size: 32px;
   text-shadow: 0.5px 1px 0px #7ff;
   font-weight: bold;
   animation: logoanimation 2s linear infinite forwards alternate;
 }
 @keyframes logoanimation {
   0% {
-    scale: 1;
     color: #000;
     text-shadow: 0.5px 1px 0px #7ff;
   }
   100% {
-    scale: 1.5;
     color: #7ff;
     text-shadow: 0.5px 1px 0px #000;
   }

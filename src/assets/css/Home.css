@@ -1,14 +1,17 @@
 h1 {
   color: #fff;
+  margin-top: 30px;
 }
 
 .home {
+  width: 90%;
   position: relative;
   min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 .home-section {
   margin-top: 50px;
@@ -16,6 +19,7 @@ h1 {
   gap: 50px;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 .home-img-div {
   width: 300px;
@@ -26,22 +30,43 @@ h1 {
 .home-presentation {
   color: #fff;
   flex: 1;
+  word-spacing: 3px;
 }
 .home-presentation h3 {
   text-align: center;
 }
 .home-presentation p {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
 }
 
 @media screen and (min-width: 700px) {
   .home {
-    width: 70%;
+    width: 80%;
     margin: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .home {
+    width: 80%;
+    margin: auto;
+  }
+  .home-presentation p {
+    letter-spacing: 0;
   }
   .home-section {
     flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home {
+    width: 70%;
+    margin: auto;
+  }
+  .home-presentation p {
+    letter-spacing: 0;
   }
 }

@@ -17,17 +17,18 @@ const NavBarLink = ({ Icon, path, cPath, sCPath, text }: { Icon: ReactElement; p
 };
 const Navbar = () => {
   const [currentPath, setCurrentPath] = useState("/");
+  const [isActiveBar, setIsActiveBar] = useState(false);
   return (
     <nav>
-      <ul className="navbar-ul active">
+      <ul className={`navbar-ul ${isActiveBar ? "active" : ""}`}>
         <NavBarLink text="Home" cPath={currentPath} sCPath={setCurrentPath} path="/" Icon={<AiOutlineHome />} />
         <NavBarLink text="Projects" cPath={currentPath} sCPath={setCurrentPath} path="/projects" Icon={<AiOutlineUser />} />
         <NavBarLink text="Contact" cPath={currentPath} sCPath={setCurrentPath} path="/contact" Icon={<AiOutlineFundProjectionScreen />} />
       </ul>
-      {/* <NavBarLink text="Projects" cPath={currentPath} sCPath={setCurrentPath} path="/projects" Icon={<AiOutlineUser />} />
-      <li className="nav-bars">
+      {/* <NavBarLink text="Projects" cPath={currentPath} sCPath={setCurrentPath} path="/projects" Icon={<AiOutlineUser />} /> */}
+      <li className="nav-bars" onClick={() => setIsActiveBar(!isActiveBar)}>
         <HiBars3BottomRight />
-      </li> */}
+      </li>
     </nav>
   );
 };
