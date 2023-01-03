@@ -1,0 +1,45 @@
+.project-item {
+  height: 370px;
+  min-width: 290px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: #234;
+  box-shadow: 0 0 10px #7ff9;
+  gap: 15px;
+}
+.project-item:hover {
+  scale: 1.05;
+}
+.project-item .img {
+  background-color: #000;
+  flex: 1;
+}
+.project-item .content {
+  display: flex;
+  flex-direction: column;
+  flex: 0.9;
+  padding: 5px;
+}
+
+.project-item .content .title {
+  color: #6dd;
+}
+
+.project-item .content .description {
+  flex: 1;
+  color: #def;
+}
+
+.project-item .content .links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-item .content .links a {
+  outline: none;
+  text-decoration: none;
+  background-color: #000;
+  color: #9ff;
+  padding: 1px 7px;
+}

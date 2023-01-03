@@ -1,6 +1,6 @@
 import { Dispatch, ReactElement, SetStateAction, useState } from "react";
 import { Link } from "react-router-dom";
-import "./../assets/NavBar.css";
+import "./../assets/css/components/NavBar.css";
 import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 import { HiBars3BottomRight } from "react-icons/hi2";
 const NavBarLink = ({ Icon, path, cPath, sCPath, text }: { Icon: ReactElement; path: string; cPath: string; text: string; sCPath: Dispatch<SetStateAction<string>> }) => {
