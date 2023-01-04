@@ -1,4 +1,5 @@
 import React from "react";
+import svgimg from "./../assets/svg/profile-coder.svg";
 import "./../assets/css/Home.css";
 const Home = () => {
   return (
@@ -6,7 +7,9 @@ const Home = () => {
       <div className="home">
         <h1 className="home-title">About Me</h1>
         <section className="home-section">
-          <div className="home-img-div"></div>
+          <div className="home-img-div">
+            <img src={svgimg} alt="" />
+          </div>
           <div className="home-presentation">
             <h3>Yeffrey Coder</h3>
             <p>

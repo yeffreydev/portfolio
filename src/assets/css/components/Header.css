@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  width: 90%;
+  width: 95%;
   height: 100%;
   margin: auto;
   align-items: center;
@@ -72,14 +72,14 @@
     width: 80%;
   }
 }
-/*litte screen */
-@media screen and (min-width: 700px) {
+/*middle screen */
+@media screen and (min-width: 900px) {
   .header {
     width: 70%;
   }
 }
-/*litte screen */
-@media screen and (min-width: 700px) {
+/*long screen */
+@media screen and (min-width: 1200px) {
   .header {
     width: 60%;
   }

@@ -1,0 +1,91 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact h1 {
+  margin: 30px 0;
+  text-align: center;
+  color: #7ff;
+}
+
+/* contact form section  */
+.contact .contact-form {
+  padding: 5px;
+  background-color: #011;
+}
+.contact .contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-form form fieldset {
+  margin: 10px 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-form form fieldset label {
+  margin-right: 30px;
+}
+.contact .contact-form form fieldset input {
+  background-color: #0000;
+  border: none;
+  border-bottom: 1px solid #7ff;
+  color: #9bb;
+  outline: none;
+}
+.contact .contact-form form fieldset textarea {
+  background-color: #2333;
+  border: 0.5px solid #477;
+  outline: none;
+  color: #9bb;
+}
+.contact .contact-form form fieldset:last-child {
+  margin: auto;
+}
+.contact .contact-form form fieldset input[type="submit"] {
+  border: none;
+  background-color: #466;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #7ff;
+  padding: 7px 15px;
+}
+@media screen and (min-width: 700px) {
+  .contact .contact-form form fieldset {
+    flex-direction: row;
+    margin: 30px 0;
+  }
+  .contact .contact-form form fieldset input,
+  .contact .contact-form form fieldset textarea {
+    flex: 1;
+  }
+}
+/* social media section  */
+.contact .social-media {
+  margin: 20px 0;
+}
+.contact .social-media h3 {
+  margin: 10px 0;
+  color: #7ff;
+}
+.contact .social-media ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.contact .social-media ul li {
+  border: 1px solid #7ff;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
+
+.contact .social-media ul li a {
+  text-decoration: none;
+  color: #8bb;
+}
+.contact .social-media ul li a svg {
+  margin-right: 20px;
+  color: #7ff;
+}

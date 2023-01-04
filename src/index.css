@@ -19,6 +19,7 @@ code {
 }
 
 :root {
+  color: #9bb;
   --tablet-max-width: 768px;
   --width-content: 100%;
 }
