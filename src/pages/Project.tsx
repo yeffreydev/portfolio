@@ -13,8 +13,28 @@ function Project() {
     console.log(findItem);
   }, []);
   return (
-    <div>
-      <h3 style={{ color: "#fff" }}>{project?.title}</h3>
+    <div className="content-container">
+      <div className="project content-width">
+        <h1>{project?.title}</h1>
+        <p>{project?.description}</p>
+        <div className="carousel-imgs">
+          <span className="left-row">{"<<"}</span>
+          <span className="right-row">{">>"}</span>
+          <div className="img focus"></div>
+          <div className="img"></div>
+          <div className="img"></div>
+          <div className="img"></div>
+        </div>
+        <div className="tech-list">
+          <h3>technologies use in this project</h3>
+          <ul>
+            <li>React</li>
+            <li>Css</li>
+            <li>JSX/TSX</li>
+            <li>TypeScript</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

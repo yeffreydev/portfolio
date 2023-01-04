@@ -65,3 +65,22 @@
 .navbar-icon > * {
   color: #5ff;
 }
+
+/*litte screen */
+@media screen and (min-width: 700px) {
+  .header {
+    width: 80%;
+  }
+}
+/*litte screen */
+@media screen and (min-width: 700px) {
+  .header {
+    width: 70%;
+  }
+}
+/*litte screen */
+@media screen and (min-width: 700px) {
+  .header {
+    width: 60%;
+  }
+}

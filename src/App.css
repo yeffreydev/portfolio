@@ -24,3 +24,30 @@ body {
   width: 100vw;
   overflow-y: auto;
 }
+
+.content-width {
+  width: 95%;
+  position: relative;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+/*media querys*/
+@media screen and (min-width: 700px) {
+  .content-width {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .content-width {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content-width {
+    width: 60%;
+  }
+}

@@ -9,7 +9,7 @@
   margin: auto;
 }
 .home-title {
-  color: #fff;
+  color: #7ff;
   margin-top: 30px;
 }
 
@@ -22,18 +22,20 @@
   margin-bottom: 30px;
 }
 .home-img-div {
+  border: 1px solid #7ff;
   width: 300px;
   height: 300px;
   border-radius: 50%;
   background-color: #444;
 }
 .home-presentation {
-  color: #fff;
+  color: #9bb;
   flex: 1;
   word-spacing: 3px;
 }
 .home-presentation h3 {
   text-align: center;
+  color: #7ff;
 }
 .home-presentation p {
   margin-top: 20px;

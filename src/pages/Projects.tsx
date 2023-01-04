@@ -16,7 +16,7 @@ const ProjectsList = ({ projects }: { projects: ProjectI[] }) => {
 const Projects = () => {
   return (
     <div className="content-container">
-      <div className="projects">
+      <div className="projects content-width">
         <h1 className="projects-title">Projects</h1>
         <ProjectsList projects={projects} />
       </div>

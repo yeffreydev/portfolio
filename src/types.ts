@@ -4,4 +4,5 @@ export interface ProjectI {
   img?: string;
   id: string | number;
   codeurl?: string;
+  imgsProject?: string[];
 }
