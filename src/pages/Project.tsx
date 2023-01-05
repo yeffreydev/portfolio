@@ -16,6 +16,13 @@ function Project() {
     <div className="content-container">
       <div className="project content-width">
         <h1>{project?.title}</h1>
+        <div className="controller">
+          <button>{"<<"}</button>
+          <button>1</button>
+          <button className="focus">2</button>
+          <button>3</button>
+          <button>{">>"}</button>
+        </div>
         <p>{project?.description}</p>
         <div className="carousel-imgs">
           <span className="left-row">{"<<"}</span>

@@ -6,6 +6,29 @@
   margin-top: 10px;
   color: #7ff;
 }
+
+/* project contoler  */
+.project .controller {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 4px;
+}
+.project .controller button {
+  background-color: transparent;
+  border: none;
+  color: #deff;
+  font-weight: bolder;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #455;
+}
+.project .controller button:hover {
+  background-color: #233;
+}
+.project .controller button.focus {
+  background-color: #233;
+}
 .project p {
   color: #9bb;
   margin: 30px 0;

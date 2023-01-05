@@ -1,6 +1,6 @@
 .project-item {
   height: 370px;
-  min-width: 290px;
+  max-width: 250px;
   display: flex;
   flex-direction: column;
   padding: 10px;

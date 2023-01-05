@@ -8,7 +8,7 @@ const Home = () => {
         <h1 className="home-title">About Me</h1>
         <section className="home-section">
           <div className="home-img-div">
-            <img src={svgimg} alt="" />
+            <img src={svgimg} alt="profile-coder" />
           </div>
           <div className="home-presentation">
             <h3>Yeffrey Coder</h3>
