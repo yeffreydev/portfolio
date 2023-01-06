@@ -1,3 +1,7 @@
+interface TechItemI {
+  link: string;
+  name: string;
+}
 export interface ProjectI {
   title: string;
   description: string;
@@ -5,4 +9,5 @@ export interface ProjectI {
   id: string | number;
   codeurl?: string;
   imgsProject?: string[];
+  stackTech?: TechItemI[];
 }

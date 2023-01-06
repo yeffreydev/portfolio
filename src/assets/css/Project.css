@@ -19,13 +19,16 @@
 }
 .project .controller a,
 .project .controller button {
-  background-color: transparent;
   border: none;
   color: #deff;
   font-weight: bolder;
   padding: 5px;
   cursor: pointer;
   background-color: #455;
+}
+.project .controller button.disable {
+  background-color: transparent;
+  cursor: initial;
 }
 .project .controller a:hover {
   background-color: #233;
@@ -38,40 +41,60 @@
   margin: 30px 0;
 }
 
+/* .carousel-imgs  */
+.project-img-carousel {
+  padding: 5px;
+  background-color: #123;
+  position: relative;
+  display: flex;
+  border: 2px solid #567;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  max-width: 90%;
+}
+
 .carousel-imgs {
   position: relative;
-  border: 1px solid #7ff;
+  padding: 20px 35px;
   display: flex;
-  justify-content: space-between;
-  width: fit-content;
-  height: min-content;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  min-height: 200px;
+  gap: 20px;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
 }
-.carousel-imgs .left-row,
-.carousel-imgs .right-row {
-  display: inline-block;
+
+.project-img-carousel .left-row,
+.project-img-carousel .right-row {
+  position: absolute;
+  border: none;
+  display: flex;
   color: #7ff;
   border-radius: 3px;
-  position: absolute;
   font-weight: bolder;
   top: 50%;
   background-color: #455;
-  padding: 3px;
+  padding: 7px;
+  z-index: 1;
   cursor: pointer;
 }
-.carousel-imgs .left-row {
+.project-img-carousel .left-row {
   left: 5px;
 }
-.carousel-imgs .right-row {
+.project-img-carousel .right-row {
   right: 5px;
 }
 .carousel-imgs .img {
-  display: none;
-  width: 300px;
-  background-color: #000;
+  display: inline-block;
+  /* border: 1px solid red; */
+  min-width: 300px;
+  background-color: #345;
   height: 380px;
+  border: 1px solid #678;
+  border-radius: 3px;
+  padding: 2px;
 }
 
 .carousel-imgs .img.focus {
@@ -98,4 +121,15 @@
   border: 1px solid #7ff;
   padding: 3px 7px;
   border-radius: 5px;
+}
+@media screen and (min-width: 900px) {
+  .project-img-carousel {
+    max-width: 85%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-img-carousel {
+    max-width: 75%;
+  }
 }

@@ -1,10 +1,43 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./../assets/css/Project.css";
 import { useParams } from "react-router-dom";
 import projects from "../data/projects";
 import { ProjectI } from "../types";
 import ProjectController from "../components/ProjectController";
-
+//components
+const ImgsCarousel = ({ imgs }: { imgs: string[] }) => {
+  const [focusImg, setFocusImg] = useState<number>(0);
+  let div = useRef<HTMLDivElement>(null);
+  function scrollHorizontalRight() {
+    if (div.current) {
+      div.current.scrollTo({ left: div.current.scrollLeft + 300, behavior: "smooth" });
+    }
+  }
+  function scrollHorizontalLeft() {
+    if (div.current) {
+      div.current.scrollTo({ left: div.current.scrollLeft - 300, behavior: "smooth" });
+    }
+  }
+  return (
+    <div className="project-img-carousel">
+      <button className="left-row" onClick={scrollHorizontalLeft}>
+        {"<<"}
+      </button>
+      <button className="right-row" onClick={scrollHorizontalRight}>
+        {">>"}
+      </button>
+      <div ref={div} className="carousel-imgs">
+        {imgs.map((item, index) => {
+          return (
+            <div className={index === focusImg ? "img focus" : "img"} key={index}>
+              <span>{item}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 //functional component
 function Project() {
   let params = useParams();
@@ -18,11 +51,16 @@ function Project() {
   };
   const changeProject = (project: ProjectI | null) => {
     setProject(project);
+    if ((project?.id || 0) >= start + 2 && projects.length > start + 3) {
+      setStart(start + 1);
+    }
+    if (start != 0 && start === (project?.id || 0)) {
+      setStart(start - 1);
+    }
   };
   const moveRight = () => {
     if (projects.length > start + 3) {
       setStart(start + 1);
-      console.log(start + 1);
     }
   };
   const moveLeft = () => {
@@ -34,6 +72,9 @@ function Project() {
   //hooks
   useEffect(() => {
     changeProject(findProject(id || "") || null);
+    if (parseInt(id || "") > start + 2) {
+      setStart(parseInt(id || "") - 2);
+    }
     //eslint-disable-next-line
   }, []);
   return (
@@ -46,14 +87,7 @@ function Project() {
             <h1>{project?.title}</h1>
             <ProjectController idFocus={project.id} changeProject={changeProject} moveLeft={moveLeft} moveRight={moveRight} start={start} projects={projects} />
             <p>{project?.description}</p>
-            <div className="carousel-imgs">
-              <span className="left-row">{"<<"}</span>
-              <span className="right-row">{">>"}</span>
-              <div className="img focus"></div>
-              <div className="img"></div>
-              <div className="img"></div>
-              <div className="img"></div>
-            </div>
+            <ImgsCarousel imgs={project.imgsProject ?? []} />
             <div className="tech-list">
               <h3>technologies use in this project</h3>
               <ul>
@@ -63,7 +97,7 @@ function Project() {
                 <li>TypeScript</li>
               </ul>
             </div>
-            <ProjectController idFocus={project.id} changeProject={changeProject} moveLeft={moveLeft} moveRight={moveRight} start={start} projects={projects} />{" "}
+            <ProjectController idFocus={project.id} changeProject={changeProject} moveLeft={moveLeft} moveRight={moveRight} start={start} projects={projects} />
           </>
         )}
       </div>
