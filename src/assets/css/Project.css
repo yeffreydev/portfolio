@@ -14,6 +14,10 @@
   margin-top: 10px;
   gap: 4px;
 }
+.project .controller:last-child {
+  margin-bottom: 30px;
+}
+.project .controller a,
 .project .controller button {
   background-color: transparent;
   border: none;
@@ -23,10 +27,10 @@
   cursor: pointer;
   background-color: #455;
 }
-.project .controller button:hover {
+.project .controller a:hover {
   background-color: #233;
 }
-.project .controller button.focus {
+.project .controller a.focus {
   background-color: #233;
 }
 .project p {
