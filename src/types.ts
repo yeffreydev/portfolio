@@ -8,6 +8,7 @@ export interface ProjectI {
   img?: string;
   id: string | number;
   codeurl?: string;
+  projecturl?: string;
   imgsProject?: string[];
   stackTech?: TechItemI[];
 }

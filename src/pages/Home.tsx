@@ -19,7 +19,6 @@ const Home = () => {
               <b>MySQL</b>.
               <br /> I am also familiar with NoSQL databases like <b>MongoDB</b>. <br />
               In my professional experience, I have worked on a variety of projects and have made open source contributions.
-              <br /> I am confident in my ability to develop and maintain full-stack applications and am always eager to learn and grow as a developer.
               <br />
               You can see some of my projects{" "}
               <b>

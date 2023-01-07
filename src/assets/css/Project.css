@@ -88,40 +88,65 @@
 }
 .carousel-imgs .img {
   display: inline-block;
-  /* border: 1px solid red; */
   min-width: 300px;
   background-color: #345;
   height: 380px;
-  border: 1px solid #678;
+  border: 1px solid #789;
   border-radius: 3px;
   padding: 2px;
+  display: flex;
+}
+.carousel-imgs .img img {
+  object-fit: cover;
+  width: 100%;
 }
 
-.carousel-imgs .img.focus {
-  display: block;
-}
-
-.tech-list {
-  margin-left: 50px;
+.tech-list,
+.view-code,
+.view-project {
   margin-top: 20px;
   color: #9bb;
-}
-.tech-list h3 {
-  color: #7ff;
 }
 
 .tech-list ul {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   list-style-type: none;
   gap: 20px;
   margin-top: 20px;
 }
+
 .tech-list ul li {
   border: 1px solid #7ff;
-  padding: 3px 7px;
   border-radius: 5px;
 }
+.tech-list ul li a {
+  display: inline-block;
+  color: #def;
+  padding: 3px 7px;
+}
+.tech-list ul li a:hover {
+  color: #abc;
+}
+/* view project  */
+.view-project h3,
+.view-code h3,
+.tech-list h3 {
+  color: #7ff;
+  text-align: center;
+}
+
+.view-code p a,
+.view-project p a {
+  color: #def;
+  border-bottom: 1px solid #8ff;
+}
+.view-code p a:hover,
+.view-project p a:hover {
+  color: #abc;
+}
+
 @media screen and (min-width: 900px) {
   .project-img-carousel {
     max-width: 85%;

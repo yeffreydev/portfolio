@@ -6,7 +6,6 @@ import { ProjectI } from "../types";
 import ProjectController from "../components/ProjectController";
 //components
 const ImgsCarousel = ({ imgs }: { imgs: string[] }) => {
-  const [focusImg, setFocusImg] = useState<number>(0);
   let div = useRef<HTMLDivElement>(null);
   function scrollHorizontalRight() {
     if (div.current) {
@@ -29,8 +28,8 @@ const ImgsCarousel = ({ imgs }: { imgs: string[] }) => {
       <div ref={div} className="carousel-imgs">
         {imgs.map((item, index) => {
           return (
-            <div className={index === focusImg ? "img focus" : "img"} key={index}>
-              <span>{item}</span>
+            <div className={"img"} key={index}>
+              <img src={item} alt="img project" />
             </div>
           );
         })}
@@ -54,7 +53,7 @@ function Project() {
     if ((project?.id || 0) >= start + 2 && projects.length > start + 3) {
       setStart(start + 1);
     }
-    if (start != 0 && start === (project?.id || 0)) {
+    if (start !== 0 && start === (project?.id || 0)) {
       setStart(start - 1);
     }
   };
@@ -91,11 +90,32 @@ function Project() {
             <div className="tech-list">
               <h3>technologies use in this project</h3>
               <ul>
-                <li>React</li>
-                <li>Css</li>
-                <li>JSX/TSX</li>
-                <li>TypeScript</li>
+                {project?.stackTech?.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <a href={item.link} target="_blank">
+                        {item.name}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
+            </div>
+            <div className="view-project">
+              <h3>view project </h3>
+              <p>
+                <a href={project.projecturl} target={"_blank"}>
+                  {project.projecturl}
+                </a>
+              </p>
+            </div>
+            <div className="view-code">
+              <h3>view code </h3>
+              <p>
+                <a href={project.codeurl} target={"_blank"}>
+                  {project.codeurl}
+                </a>
+              </p>
             </div>
             <ProjectController idFocus={project.id} changeProject={changeProject} moveLeft={moveLeft} moveRight={moveRight} start={start} projects={projects} />
           </>
