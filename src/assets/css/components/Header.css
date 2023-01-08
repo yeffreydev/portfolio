@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  position: sticky;
   width: 95%;
   height: 100%;
   margin: auto;

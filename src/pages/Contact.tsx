@@ -1,7 +1,8 @@
 import "./../assets/css/Contact.css";
 import { BsLinkedin, BsGithub, BsDiscord } from "react-icons/bs";
-import { SiTiktok } from "react-icons/si";
-import { FormEvent, FormEventHandler, useState } from "react";
+// import { SiTiktok } from "react-icons/si";
+import { FormEvent, useState } from "react";
+import { config } from "../config";
 
 //interfaces for states
 interface FormI {
@@ -10,7 +11,7 @@ interface FormI {
   content: string;
 }
 const Contact = () => {
-  let serverurl = "http://localhost:4000";
+  let serverurl = config.hook_url;
   const [form, setForm] = useState<FormI>({ name: "", email: "", content: "" });
   const changeForm = (e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     let name = e.currentTarget.name;
@@ -63,7 +64,7 @@ const Contact = () => {
           <h3>social media</h3>
           <ul>
             <li>
-              <a target="_blank" href="https://www.github.com/yeffreycode">
+              <a target="_blank" rel="noreferrer" href="https://www.github.com/yeffreycode">
                 <span>
                   <BsGithub />
                 </span>
@@ -71,23 +72,23 @@ const Contact = () => {
               </a>
             </li>
             <li>
-              <a target={"_blank"} href="https://www.linkedin.com/in/yeffrey-zlk-074227246/">
+              <a target={"_blank"} rel="noreferrer" href="https://www.linkedin.com/in/yeffrey-zlk-074227246/">
                 <span>
                   <BsLinkedin />
                 </span>
                 Linkedin
               </a>
             </li>
-            <li>
+            {/* <li>
               <a target="_blank" href="https://tiktok.com">
                 <span>
                   <SiTiktok />
                 </span>
                 tiktok
               </a>
-            </li>
+            </li> */}
             <li>
-              <a target="_blank" href="https://discord.gg/pQpRvY9p">
+              <a target="_blank" rel="noreferrer" href="https://discord.gg/pQpRvY9p">
                 <span>
                   <BsDiscord />
                 </span>

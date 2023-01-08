@@ -18,44 +18,30 @@ const projects: ProjectI[] = [
   },
   {
     id: 1,
-    imgsProject: ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"],
+    imgsProject: [require("./../assets/img/chat1.png"), require("./../assets/img/chat2.png"), require("./../assets/img/chat3.png")],
     description: `
-   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere tenetur eaque non. Tenetur repellendus, natus, aperiam veniam blanditiis autem non sapiente quae temporibus dolores fugit
-        exercitationem consequatur esse adipisci.`,
-    title: "project 2",
-    codeurl: "https://github.com/yeffreycode/",
+    This chat application is built using Node.js and Socket.io, allowing users to communicate with each other in real-time by sending and receiving messages. The server-side of the application is built using Node.js and uses Socket.io to establish a WebSocket connection with the client. On the client-side, the application is built using HTML, CSS, and JavaScript and uses Socket.io to connect to the server and send and receive messages. This chat application provides a simple and efficient way for users to communicate in real-time.
+    `,
+    title: "basic chat app",
+    codeurl: "https://github.com/yeffreycode/basic-chat-app",
+    projecturl: "https://basic-chat-app.onrender.com/",
+    stackTech: [
+      { name: "NodeJs", link: "https://nodejs.org" },
+      { name: "Socket.IO", link: "https://socket.io/" },
+      { name: "HTML5", link: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5" },
+      { name: "Css3", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+      { name: "JavaScript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    ],
   },
   {
     id: 2,
-    imgsProject: ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"],
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere tenetur eaque non. Tenetur repellendus, natus, aperiam veniam blanditiis autem non sapiente quae temporibus dolores fugit
-        exercitationem consequatur esse adipisci.`,
-    title: "project 3",
-    codeurl: "https://github.com/yeffreycode/",
-  },
-  {
-    id: 3,
-    imgsProject: ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"],
-    description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere tenetur eaque non. Tenetur repellendus, natus, aperiam veniam blanditiis autem non sapiente quae temporibus dolores fugit
-        exercitationem consequatur esse adipisci.`,
-    title: "project 4",
-    codeurl: "https://github.com/yeffreycode/",
-  },
-  {
-    id: 4,
-    imgsProject: ["img4.jpg", "img5.jpg"],
-    description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere tenetur eaque non. Tenetur repellendus, natus, aperiam veniam blanditiis autem non sapiente quae temporibus dolores fugit
-        exercitationem consequatur esse adipisci.`,
-    title: "project 5",
-    codeurl: "https://github.com/yeffreycode/",
-  },
-  {
-    id: 5,
-    imgsProject: ["img5.jpg"],
-    description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere tenetur eaque non. Tenetur repellendus, natus, aperiam veniam blanditiis autem non sapiente quae temporibus dolores fugit
-        exercitationem consequatur esse adipisci.`,
-    title: "project 6",
-    codeurl: "https://github.com/yeffreycode/",
+    imgsProject: [require("./../assets/img/crud1.png"), require("./../assets/img/crud2.png"), require("./../assets/img/crud3.png")],
+    description: `
+    React state CRUD refers to the ability to create, read, update, and delete data in a React component's state. This is useful for managing and storing data that is specific to a particular component and needs to be accessible within that component or passed down to child components through props. With state CRUD, a developer can create new data, retrieve and display existing data, update or modify existing data, and delete data as needed within the component. This allows for a more dynamic and interactive user experience in a React application.
+        `,
+    title: "Users Crud with React",
+    projecturl: "https://users-crud-react.netlify.app/",
+    codeurl: "https://github.com/yeffreycode/users-crud-react",
   },
 ];
 

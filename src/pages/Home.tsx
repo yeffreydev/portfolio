@@ -1,8 +1,12 @@
-import React from "react";
+import { useEffect } from "react";
 import svgimg from "./../assets/svg/profile-coder.svg";
 import "./../assets/css/Home.css";
 import { Link } from "react-router-dom";
+import { config } from "../config";
 const Home = () => {
+  useEffect(() => {
+    fetch(config.hook_url);
+  }, []);
   return (
     <div className="content-container">
       <div className="home">

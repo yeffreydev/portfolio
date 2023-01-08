@@ -77,7 +77,6 @@
   top: 50%;
   background-color: #455;
   padding: 7px;
-  z-index: 1;
   cursor: pointer;
 }
 .project-img-carousel .left-row {
@@ -87,6 +86,7 @@
   right: 5px;
 }
 .carousel-imgs .img {
+  position: relative;
   display: inline-block;
   min-width: 300px;
   background-color: #345;
