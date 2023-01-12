@@ -5,6 +5,7 @@ function Projects() {
   let navigate = useNavigate();
   useEffect(() => {
     navigate("/projects/0");
+    //eslint-disable-next-line
   }, []);
   return null;
 }
