@@ -14,10 +14,7 @@ const Footer = () => {
         <a href="https://www.instagram.com/yeffrey404" target={"_blank"}>
           <FaInstagram />
         </a>
-        <a
-          href="https://www.linkedin.com/in/yeffrey-espinoza-074227246/"
-          target={"_blank"}
-        >
+        <a href="https://www.linkedin.com/in/yeffrey-espinoza-074227246/" target={"_blank"}>
           <FaLinkedin />
         </a>
       </div>

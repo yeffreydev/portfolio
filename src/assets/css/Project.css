@@ -68,6 +68,7 @@
 
 .project-img-carousel .left-row,
 .project-img-carousel .right-row {
+  z-index: 1;
   position: absolute;
   border: none;
   display: flex;
