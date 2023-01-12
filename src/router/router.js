@@ -5,6 +5,7 @@ import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
 import Error from "../pages/Error";
 import Project from "../pages/Project";
+import Sponsors from "../pages/Sponsors";
 const Router = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} index />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:id" element={<Project />} />
         <Route path="/*" element={<Error />} />
