@@ -93,7 +93,7 @@ function Project() {
                 {project?.stackTech?.map((item, index) => {
                   return (
                     <li key={index}>
-                      <a href={item.link} target="_blank">
+                      <a href={item.link} target="_blank" rel="noreferrer">
                         {item.name}
                       </a>
                     </li>
@@ -104,7 +104,7 @@ function Project() {
             <div className="view-project">
               <h3>view project </h3>
               <p>
-                <a href={project.projecturl} target={"_blank"}>
+                <a href={project.projecturl} target={"_blank"} rel="noreferrer">
                   {project.projecturl}
                 </a>
               </p>
@@ -112,7 +112,7 @@ function Project() {
             <div className="view-code">
               <h3>view code </h3>
               <p>
-                <a href={project.codeurl} target={"_blank"}>
+                <a href={project.codeurl} target={"_blank"} rel="noreferrer">
                   {project.codeurl}
                 </a>
               </p>
