@@ -1,4 +1,4 @@
-import { Dispatch, ReactElement, SetStateAction, useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./../assets/css/components/NavBar.css";
 import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
@@ -60,7 +60,7 @@ const Navbar = () => {
           path="/contact"
           Icon={<AiOutlineFundProjectionScreen />}
         />
-          <NavBarLink
+        <NavBarLink
           onclick={() => {
             setIsActiveBar(false);
           }}
