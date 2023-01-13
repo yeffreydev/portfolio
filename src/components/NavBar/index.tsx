@@ -1,20 +1,35 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import "./../../assets/css/components/NavBar.css";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import styles from "./styles.module.css";
 import NavBarLink from "./NavBarLink";
 import links from "./links";
+import Dropdown from "./Dropdown";
 export default function Navbar() {
   let location = useLocation();
   const [currentPath, setCurrentPath] = useState("/");
   const [isActiveBar, setIsActiveBar] = useState(false);
+
+  let ulRef = useRef<HTMLUListElement | null>(null);
+  let barsRef = useRef<HTMLLIElement | null>(null);
   useEffect(() => {
     setCurrentPath(location.pathname);
   }, [location.pathname]);
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (ulRef!) {
+        !ulRef.current?.contains(e.target as Node) && !barsRef.current?.contains(e.target as Node) && setIsActiveBar(false);
+      }
+    };
+    isActiveBar && document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isActiveBar]);
+
   return (
-    <nav>
-      <ul className={`navbar-ul ${isActiveBar ? "active" : ""}`}>
+    <nav className={styles.nav}>
+      <ul ref={ulRef} className={`${styles.navbar_ul} ${isActiveBar ? styles.active : ""}`}>
         {links.map((item, index) => {
           return (
             <NavBarLink
@@ -29,11 +44,11 @@ export default function Navbar() {
             />
           );
         })}
-        <button className={styles.container}>More</button>
       </ul>
-      <li className="nav-bars" onClick={() => setIsActiveBar(!isActiveBar)}>
+      <li ref={barsRef} className={styles.nav_bars} onClick={() => setIsActiveBar(!isActiveBar)}>
         <HiBars3BottomRight />
       </li>
+      <Dropdown cPath={currentPath} onclick={() => setIsActiveBar(false)} />
     </nav>
   );
 }

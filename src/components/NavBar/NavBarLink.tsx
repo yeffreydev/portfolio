@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { ReactElement } from "react";
+import styles from "./styles.module.css";
 export default function NavBarLink({ Icon, path, cPath, text, onclick }: { Icon: ReactElement; path: string; cPath: string; text: string; onclick: () => void }) {
   return (
     <li>
       <Link
-        className={cPath.replace(/\/\d+$/, "") === path ? "active" : ""}
+        className={cPath.replace(/\/\d+$/, "") === path ? styles.active : ""}
         onClick={() => {
           onclick();
         }}

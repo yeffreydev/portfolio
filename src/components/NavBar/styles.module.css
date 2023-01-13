@@ -1,3 +1,147 @@
-.container {
-  background-color: red;
+.nav {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar_ul {
+  flex: 1;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition-duration: 200ms;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: calc(100vh - 60px);
+  background-color: #121212;
+  top: 60px;
+  gap: 20px;
+}
+.navbar_ul.active {
+  right: 0;
+  width: 70%;
+  top: 60px;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.navbar_ul li {
+  width: 100%;
+  list-style: none;
+}
+.nav_bars {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  color: #7ff;
+}
+.nav_bars svg {
+  font-size: 30px;
+}
+.navbar_ul li a {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 5px 10px;
+  color: #9bb;
+  font-size: 14px;
+  width: 100%;
+}
+.navbar_ul li a.active,
+.navbar_ul li a:hover {
+  color: #7ff;
+  font-weight: bolder;
+}
+.navbar_ul a svg {
+  margin-right: 3px;
+}
+
+.more {
+  width: 100%;
+  height: 100%;
+  background-color: #345;
+  color: #def;
+  cursor: pointer;
+}
+
+/* dropdown component  */
+.dropdown {
+  display: none;
+  width: 65px;
+  position: relative;
+  height: 35px;
+  margin: auto;
+  margin-left: 20px;
+}
+
+.dropdown_ul {
+  top: 35px;
+  right: 0;
+  display: none;
+  position: absolute;
+  width: 200px;
+  padding-top: 12px;
+  height: min-content;
+}
+.dropdown:hover .dropdown_ul {
+  display: block;
+}
+.dropdown_ul li {
+  background-color: #012;
+  list-style: none;
+  height: fit-content;
+  text-align: center;
+}
+.dropdown_ul li a {
+  display: inline-block;
+  width: 100%;
+  color: #def;
+  padding: 10px 0;
+  font-size: 14px;
+}
+.dropdown ul a svg {
+  margin-right: 3px;
+}
+
+.dropdown_ul li a.active,
+.dropdown_ul li a:hover {
+  color: #7ff;
+  font-weight: bolder;
+}
+.dropdown_ul li:hover {
+  background-color: #234;
+  cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .navbar_ul li:nth-child(5) {
+    display: none;
+  }
+  .navbar_ul,
+  .navbar_ul.active {
+    position: relative;
+    overflow-x: scroll;
+    box-shadow: none;
+    flex-direction: row;
+    height: 50px;
+    max-width: 100%;
+    justify-content: flex-start;
+    top: 0;
+    overflow-x: hidden;
+    flex: 1;
+    gap: 57px;
+  }
+  .dropdown {
+    display: block;
+  }
+  .nav_bars {
+    display: none;
+  }
 }
