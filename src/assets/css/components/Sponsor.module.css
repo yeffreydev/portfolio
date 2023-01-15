@@ -1,0 +1,21 @@
+.sponsor {
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+.sponsor:hover {
+  scale: 1.2;
+}
+
+.sponsor img {
+  width: 100%;
+  object-fit: scale-down;
+  height: 100%;
+}
+
+.sponsor img[alt] {
+  font-size: 8px;
+}
