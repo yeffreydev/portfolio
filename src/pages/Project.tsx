@@ -78,7 +78,7 @@ function Project() {
   }, []);
   return (
     <div className="content-container">
-      <div className="project content-width">
+      <div className="project content-width animate-content">
         {!project ? (
           <h1>Project not found</h1>
         ) : (

@@ -22,7 +22,7 @@
   border: none;
   color: #deff;
   font-weight: bolder;
-  padding: 5px;
+  padding: 5px 15px;
   cursor: pointer;
   background-color: #455;
 }
@@ -68,6 +68,7 @@
 
 .project-img-carousel .left-row,
 .project-img-carousel .right-row {
+  animation: initial;
   z-index: 1;
   position: absolute;
   border: none;

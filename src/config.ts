@@ -1,3 +1,3 @@
 export const config = {
-  hook_url: "https://server-portfolio-dibu.onrender.com",
+  hook_url: "https://server-portfolio-ye.up.railway.app",
 };

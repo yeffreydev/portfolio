@@ -38,7 +38,7 @@ const Contact = () => {
   };
   return (
     <div className="content-container">
-      <div className="contact content-width">
+      <div className="contact content-width animate-content">
         <h1>Contact Me</h1>
         <div className="contact-form">
           <h3>contact form</h3>

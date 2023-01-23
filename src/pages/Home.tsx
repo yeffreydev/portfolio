@@ -1,22 +1,18 @@
-import { useEffect } from "react";
 import svgimg from "./../assets/svg/profile-coder.svg";
-import "./../assets/css/Home.css";
 import { Link } from "react-router-dom";
-import { config } from "../config";
+import styles from "./../assets/css/Home.module.css";
+
 const Home = () => {
-  useEffect(() => {
-    fetch(config.hook_url);
-  }, []);
   return (
     <div className="content-container">
-      <div className="home">
-        <h1 className="home-title">About Me</h1>
-        <section className="home-section">
-          <div className="home-img-div">
-            <img src={svgimg} alt="profile-coder" />
+      <div className={styles["home"] + " animate-content"}>
+        <h1 className={styles["home-title"]}>About Me</h1>
+        <section className={styles["home-section"]}>
+          <div className={styles["home-img-div"]}>
+            <img src={svgimg} alt={styles["profile-coder"]} />
           </div>
-          <div className="home-presentation">
-            <h3> Yefrey - A Full-Stack Software Developer</h3>
+          <div className={styles["home-presentation"]}>
+            <h3> Yefrey - Full Stack Web Developer</h3>
             <p>
               I am a skilled software developer with experience in front-end technologies such as <b>JavaScript</b>, <b>HTML5</b>, and <b>CSS3</b>.
               <br /> I am proficient in popular JavaScript libraries and frameworks such as <b>React</b> and have experience working with back-end technologies like <b>Node.js</b>, <b>Express</b>, and{" "}
