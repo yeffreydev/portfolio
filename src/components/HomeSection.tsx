@@ -7,6 +7,7 @@ export default function HomeSection() {
         <button>Contact Me</button>
       </div>
       <div>
+        {/*eslint-disable-next-line jsx-a11y/alt-text*/}
         <img />
       </div>
     </div>

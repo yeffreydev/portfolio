@@ -5,7 +5,7 @@ import Header from "./ui/Header";
 
 function App() {
   return (
-    <div>
+    <div className="w-full">
       <Header />
       <HomeSection />
       <ProjectsSection />
