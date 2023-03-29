@@ -7,9 +7,11 @@ function App() {
   return (
     <div className="w-full">
       <Header />
-      <HomeSection />
-      <ProjectsSection />
-      <ContactSection />
+      <div className="w-full md:w-9/12 lg:w-8/12 mx-auto px-2">
+        <HomeSection />
+        <ProjectsSection />
+        <ContactSection />
+      </div>
     </div>
   );
 }
