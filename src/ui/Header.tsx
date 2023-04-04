@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
+import logo from "./../../public/logo.svg";
+import Image from "next/image";
 export default function Header() {
   const [navColur, setNavColour] = useState(false);
 
@@ -13,9 +15,11 @@ export default function Header() {
         navColur && "bg-opacity-30 backdrop-filter backdrop-blur-md  shadow-lg"
       }`}
     >
-      <div className="flex px-2 mx-auto md:w-9/12 lg:w-8/12 w-full">
+      <div className="flex px-2 items-center mx-auto md:w-9/12 lg:w-8/12 w-full">
         <div>
-          <a href="#home">logo</a>
+          <a href="#home">
+            <Image height={45} src={logo} alt="jjfie" />
+          </a>
         </div>
         <nav className="flex-1 pr-3">
           <ul className="flex  w-ful justify-end gap-5 md:gap-10">
