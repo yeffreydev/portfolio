@@ -1,11 +1,15 @@
-import { useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 export default function Header() {
   const [navColur, setNavColour] = useState(false);
-  const srollHandler = () => setNavColour(window.scrollY >= 5);
-  window.addEventListener("scroll", srollHandler);
+
+  useEffect(() => {
+    const srollHandler = () => setNavColour(window ? window.scrollY >= 5 : false);
+    window ? window.addEventListener("scroll", srollHandler) : false;
+  }, []);
   return (
     <div
-      className={`items-center w-full bg-white fixed top-0 flex h-[50px] border-gray-300 border-b transition-[top] duration-200 ease-out ${
+      className={`items-center w-full bg-white fixed top-0 flex h-[50px] border-gray-200 border-b transition-[top] duration-200 ease-out ${
         navColur && "bg-opacity-30 backdrop-filter backdrop-blur-md  shadow-lg"
       }`}
     >
