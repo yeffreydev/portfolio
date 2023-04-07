@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import logo from "./../../public/logo.svg";
+import logo from "./../../public/white_logo.svg";
 import Image from "next/image";
 export default function Header() {
   const [navColur, setNavColour] = useState(false);
@@ -11,7 +11,7 @@ export default function Header() {
   }, []);
   return (
     <div
-      className={`items-center w-full bg-white fixed top-0 flex h-[50px] border-gray-200 border-b transition-[top] duration-200 ease-out ${
+      className={`items-center w-full z-10 bg-black fixed top-0 flex h-[50px] border-gray-500 border-b transition-[top] duration-200 ease-out ${
         navColur && "bg-opacity-30 backdrop-filter backdrop-blur-md  shadow-lg"
       }`}
     >
