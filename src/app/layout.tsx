@@ -1,5 +1,6 @@
 import Header from "@/ui/Header";
 import "./globals.css";
+import SaveUserInfo from "./SaveUserInfo";
 
 export const metadata = {
   title: "Next.js",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         {children}
+        <SaveUserInfo />
       </body>
     </html>
   );
