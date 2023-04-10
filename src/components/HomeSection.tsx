@@ -16,7 +16,7 @@ const SocialLinks = () => {
 };
 export default function HomeSection() {
   return (
-    <div id="home" className="min-h-min pb-[300px] text-center md:text-left relative pt-[50px]">
+    <div id="home" className="min-h-min flex flex-col text-center md:text-left relative pt-[50px]">
       <ContenWidth>
         <div className="flex flex-col lg:w-9/12 mx-auto  md:flex-row gap-5 md:gap-16 lg:gap-20 mt-10 md:mt-20">
           <div className="flex-1 flex flex-col gap-3 md:gap-16">
@@ -35,7 +35,9 @@ export default function HomeSection() {
               </p>
             </div>
             <div className="flex ">
-              <button className="text-lg mt-4 md:mt-0 mx-auto font-bold px-10 py-3 rounded-2xl bg-black">Contact Me</button>
+              <a href={"#contact"} className="text-lg mt-4 md:mt-0 mx-auto font-bold px-10 py-3 rounded-2xl bg-black">
+                Contact Me
+              </a>
             </div>
           </div>
           <div className=" flex flex-col gap-4">
@@ -46,7 +48,7 @@ export default function HomeSection() {
           </div>
         </div>
       </ContenWidth>
-      <div className="absolute bottom-0 -z-0 w-screen">
+      <div className="w-screen">
         <Wave fill="#393B5C" />
       </div>
     </div>

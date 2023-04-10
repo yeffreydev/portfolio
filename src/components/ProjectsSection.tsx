@@ -4,7 +4,9 @@ export default function ProjectsSection() {
   return (
     <div id="projects" className="relative min-h-screen bg-[#393B5C] pt-[50px]">
       <ContenWidth>
-        <h1>this is a projects section </h1>
+        <div>
+          <h1 className="text-3xl font-bold">My Projects </h1>
+        </div>
       </ContenWidth>
       <div className="absolute bottom-0 w-screen">
         <Wave fill="#252638" />
