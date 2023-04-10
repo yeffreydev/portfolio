@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Yeffrey Espinoza - Home",
-  description: "I' Yeffrey, from Peru. Software Developer(frontend, backend, fullstack, nextjs, next 13, node, express)",
+  description: "I' Yeffrey Espinoza, software developer, this is my portfolio, I from Peru. Software Developer(frontend, backend, fullstack, nextjs, next 13, node, express)",
 };
 
 export default function HomePage() {
