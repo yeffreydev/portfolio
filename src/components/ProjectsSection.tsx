@@ -4,14 +4,14 @@ import { ReactNode } from "react";
 import Project from "./Project";
 
 const ProjectsList = ({ children }: { children: ReactNode }) => {
-  return <div className="flex flex-col gap-16 mt-5">{children}</div>;
+  return <div className="flex flex-col gap-16 mt-10">{children}</div>;
 };
 export default function ProjectsSection() {
   return (
     <div id="projects" className="relative min-h-screen bg-[#393B5C] pt-[50px]">
       <ContenWidth>
         <div>
-          <h1 className="text-3xl text-center md:text-left font-bold">My Projects </h1>
+          <h1 className="text-3xl border-b-4 pb-2 text-center md:text-left font-bold">My Projects </h1>
           <ProjectsList>
             <Project />
             <Project />
