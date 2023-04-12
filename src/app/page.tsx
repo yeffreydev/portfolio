@@ -1,4 +1,5 @@
 import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 import HomeSection from "@/components/HomeSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import { Metadata } from "next";
@@ -15,6 +16,7 @@ export default function HomePage() {
         <HomeSection />
         <ProjectsSection />
         <ContactSection />
+        <Footer />
       </div>
     </div>
   );
