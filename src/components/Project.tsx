@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import image from "./../../public/image.png";
 
 const RightProject = () => {
   return (
@@ -33,7 +34,7 @@ const LeftProject = () => {
       </div>
       <Link className="bg-black mx-auto md:mx-0 w-[300px] h-[150px] inline-block " href={"#"}>
         {/* image link */}
-        <Image src="" alt="" />
+        <Image width={300} height={150} src={image} alt="" />
       </Link>
       <p className="w-10/12 mx-auto md:mx-0 md:text-justify">
         {/*Project description */}

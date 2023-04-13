@@ -18,7 +18,7 @@ export default function Header() {
       <div className="flex px-2 items-center mx-auto md:w-9/12 lg:w-8/12 w-full">
         <div>
           <a href="#home">
-            <Image height={45} src={logo} alt="jjfie" />
+            <Image height={45} width={60} src={logo} alt="jjfie" />
           </a>
         </div>
         <nav className="flex-1 pr-3">

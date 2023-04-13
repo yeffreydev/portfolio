@@ -1,19 +1,51 @@
 "use client";
 
+import { FormEvent, useState } from "react";
 import { BiSend } from "react-icons/bi";
 
 export default function ContactForm() {
+  const [form, setForm] = useState({ name: "", message: "" });
+  const [isDisabledButton, setIsDisabledButton] = useState(false);
+  const handleChange = (e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    let name = e.currentTarget.name;
+    let txt = e.currentTarget.value;
+    setForm((prevForm) => ({ ...prevForm, [name]: txt }));
+  };
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    console.log("sending");
+    console.log(form);
+    e.preventDefault();
+    setIsDisabledButton(false);
+    fetch("/api/message", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(form) })
+      .then((res) => {
+        if (res.status !== 200) {
+          throw new Error("some error ocurred");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setIsDisabledButton(false);
+      })
+      .catch((e) => {
+        setIsDisabledButton(false);
+        console.log(e);
+      });
+  };
   return (
-    <form className="flex-1 flex w-11/12 mx-auto flex-col gap-4 md:gap-10" action="">
+    <form onSubmit={handleSubmit} className="flex-1 flex w-11/12 mx-auto flex-col gap-4 md:gap-10" action="">
       <h1 className="text-[#adc8e3] font-semibold">Send Me a Message</h1>
       <div>
-        <input placeholder="Your Name or email" className="text-white bg-gray-900 py-2 px-1 w-full" name="email" type="text" />
+        <input onChange={handleChange} placeholder="Your Name or email" className="text-white bg-gray-900 py-2 px-1 w-full" name="name" type="text" />
       </div>
       <div>
-        <textarea placeholder="write your message..." name="message" className="text-white py-2 px-1 bg-gray-900 w-full" />
+        <textarea onChange={handleChange} placeholder="write your message..." name="message" className="text-white py-2 px-1 bg-gray-900 w-full" />
       </div>
       <div>
-        <button className="bg-black items-center gap-2 flex rounded-xl px-7 py-2" type="submit">
+        <button
+          disabled={isDisabledButton}
+          className={`${!isDisabledButton ? "bg-black text-white cursor-pointer" : "bg-gray-700 text-gray-500"} items-center gap-2 flex rounded-xl px-7 py-2`}
+          type="submit"
+        >
           <span>send</span> <BiSend />
         </button>
       </div>
