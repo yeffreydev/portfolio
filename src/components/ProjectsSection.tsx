@@ -2,6 +2,7 @@ import ContenWidth from "@/ui/ContentWidth";
 import Wave from "@/ui/Wave";
 import { ReactNode } from "react";
 import Project from "./Project";
+import projects from "@/data/projects";
 
 const ProjectsList = ({ children }: { children: ReactNode }) => {
   return <div className="flex flex-col gap-16 mt-10">{children}</div>;
@@ -13,10 +14,9 @@ export default function ProjectsSection() {
         <div>
           <h1 className="text-3xl border-b-4 pb-2 text-center md:text-left font-bold">My Projects </h1>
           <ProjectsList>
-            <Project />
-            <Project />
-            <Project />
-            <Project />
+            {projects.map((project, index) => {
+              return <Project key={index} project={project} />;
+            })}
           </ProjectsList>
         </div>
       </ContenWidth>
