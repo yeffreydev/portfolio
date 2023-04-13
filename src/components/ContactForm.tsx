@@ -13,6 +13,7 @@ export default function ContactForm() {
   };
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!form.name || !form.message) return alert("you can't send empty value");
     setIsDisabledButton(true);
     fetch("/api/message", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(form) });
     setIsDisabledButton(false);
