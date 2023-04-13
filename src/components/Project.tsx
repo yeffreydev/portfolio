@@ -14,7 +14,6 @@ export interface ILeftProject {
   projectType: string;
   url: string;
   description: string;
-
   source: string;
 }
 export interface IProject extends ILeftProject, IRightProject {}
@@ -62,7 +61,7 @@ const LeftProject = ({ p }: { p: ILeftProject }) => {
         {/* image link */}
         <Image className="hover:opacity-50 duration-75 bg-cover object-cover w-full h-full" width={300} height={150} src={img} alt="" />
       </Link>
-      <p className="w-10/12 mx-auto md:mx-0 md:text-justify">
+      <p className="w-10/12 mx-auto md:mx-0 text-justify">
         {/*Project description */}
         {description}
       </p>
