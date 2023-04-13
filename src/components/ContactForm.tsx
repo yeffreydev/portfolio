@@ -12,33 +12,20 @@ export default function ContactForm() {
     setForm((prevForm) => ({ ...prevForm, [name]: txt }));
   };
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    console.log("sending");
-    console.log(form);
     e.preventDefault();
+    setIsDisabledButton(true);
+    fetch("/api/message", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(form) });
     setIsDisabledButton(false);
-    fetch("/api/message", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(form) })
-      .then((res) => {
-        if (res.status !== 200) {
-          throw new Error("some error ocurred");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setIsDisabledButton(false);
-      })
-      .catch((e) => {
-        setIsDisabledButton(false);
-        console.log(e);
-      });
+    setForm({ name: "", message: "" });
   };
   return (
     <form onSubmit={handleSubmit} className="flex-1 flex w-11/12 mx-auto flex-col gap-4 md:gap-10" action="">
       <h1 className="text-[#adc8e3] font-semibold">Send Me a Message</h1>
       <div>
-        <input onChange={handleChange} placeholder="Your Name or email" className="text-white bg-gray-900 py-2 px-1 w-full" name="name" type="text" />
+        <input onChange={handleChange} value={form.name} placeholder="Your Name or email" className="text-white bg-gray-900 py-2 px-1 w-full" name="name" type="text" />
       </div>
       <div>
-        <textarea onChange={handleChange} placeholder="write your message..." name="message" className="text-white py-2 px-1 bg-gray-900 w-full" />
+        <textarea onChange={handleChange} value={form.message} placeholder="write your message..." name="message" className="text-white py-2 px-1 bg-gray-900 w-full" />
       </div>
       <div>
         <button
