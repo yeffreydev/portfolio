@@ -3,6 +3,7 @@ import Image from "next/image";
 import { IconType } from "react-icons/lib";
 import { GrGithub } from "react-icons/gr";
 import { TbExternalLink } from "react-icons/tb";
+import { ReactElement } from "react";
 
 export interface IRightProject {
   skills: string[];
@@ -13,7 +14,7 @@ export interface ILeftProject {
   img: string;
   projectType: string;
   url: string;
-  description: string;
+  Description: () => JSX.Element;
   source: string;
 }
 export interface IProject extends ILeftProject, IRightProject {}
@@ -47,7 +48,7 @@ const RightProject = ({ p }: { p: IRightProject }) => {
   );
 };
 const LeftProject = ({ p }: { p: ILeftProject }) => {
-  const { title, projectType, description, source, img, url } = p;
+  const { title, projectType, Description, source, img, url } = p;
   return (
     <div className="flex flex-col mx-auto md:w-5/12 gap-2 flex-1">
       <div className="text-center md:text-left">
@@ -61,10 +62,10 @@ const LeftProject = ({ p }: { p: ILeftProject }) => {
         {/* image link */}
         <Image className="hover:opacity-50 duration-75 bg-cover object-cover w-full h-full" width={300} height={150} src={img} alt="" />
       </Link>
-      <p className="w-10/12 mx-auto md:mx-0 text-justify">
+      <div className="w-full">
         {/*Project description */}
-        {description}
-      </p>
+        {Description()}
+      </div>
       <Link target={"_blank"} className="px-3 mx-auto md:mx-0 py-1 flex items-center gap-2 bg-gray-800 w-min whitespace-nowrap rounded-xl" href={source}>
         <span>Source code</span>
         <GrGithub />

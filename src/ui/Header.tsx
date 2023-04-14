@@ -16,9 +16,9 @@ export default function Header() {
       }`}
     >
       <div className="flex px-2 items-center mx-auto md:w-9/12 lg:w-8/12 w-full">
-        <div>
-          <a href="#home">
-            <Image className="h-[49px]" src={logo} alt="logo yeffrey dev" />
+        <div className="max-w-[70px]">
+          <a href="#home" className="h-[49px] max-w-[69px] grid place-items-center">
+            <Image className=" top-0 lef-0  w-[68px] h-[49px]" src={logo} alt="logo yeffrey dev" />
           </a>
         </div>
         <nav className="flex-1 pr-3">
