@@ -21,21 +21,25 @@ export interface IProject extends ILeftProject, IRightProject {}
 const RightProject = ({ p }: { p: IRightProject }) => {
   const { skills, stack } = p;
   return (
-    <div className="flex flex-col flex-1 gap-3">
-      <div>
-        <h2 className="text-xl text-center md:text-left font-semibold">Skills I use</h2>
-        <ul className="list-disc mt-2 flex flex-col gap-2 w-10/12 md:w-full mx-auto">
+    <div className="flex flex-col lg:w-min gap-3">
+      <div className="flex flex-col gap-3">
+        <h2 className="text-xl text-left font-semibold  whitespace-nowrap">Skills I use</h2>
+        <ul className="ml-1 flex flex-wrap gap-5 lg:flex-col lg:gap-3">
           {skills.map((skill, index) => {
-            return <li key={index}>{skill}</li>;
+            return (
+              <li className="whitespace-nowrap" key={index}>
+                - {skill}
+              </li>
+            );
           })}
         </ul>
       </div>
-      <div>
-        <h2 className="text-xl font-semibold text-center md:text-left">Stack</h2>
-        <ul className="mt-2 w-10/12 flex flex-col gap-2 mx-auto md:w-full">
+      <div className="flex flex-col gap-3 ">
+        <h2 className="text-xl font-semibold text-left">Stack</h2>
+        <ul className="ml-1 flex-wrap flex gap-5 lg:flex-col lg:gap-3">
           {stack.map((stack, index) => {
             return (
-              <li key={index} className="flex text-white items-center gap-2">
+              <li key={index} className="flex w-min text-white items-center gap-1">
                 <stack.icon stroke="white" className="text-white [&>*]:stroke-white " color="#fff" fill="#fff" />
                 <span className=" text-sm">{stack.name}</span>
               </li>
@@ -49,7 +53,7 @@ const RightProject = ({ p }: { p: IRightProject }) => {
 const LeftProject = ({ p }: { p: ILeftProject }) => {
   const { title, projectType, Description, source, img, url } = p;
   return (
-    <div className="flex flex-col mx-auto md:w-5/12 gap-2 flex-1">
+    <div className="flex flex-col lg:flex-1 mx-auto gap-2">
       <div className="text-center md:text-left">
         <h1 className="leading-5 text-2xl font-bold">{title}</h1>
         <p className="text-[#6F9FCF]">
@@ -80,7 +84,7 @@ const LeftProject = ({ p }: { p: ILeftProject }) => {
 };
 export default function Project({ project }: { project: IProject }) {
   return (
-    <div className="flex pl-5 pr-2 md:pl-0 md:pr-0 flex-col pb-3 border-b md:flex-row md:justify-start gap-10">
+    <div className="flex pl-5 pr-2 lg:flex-row md:pl-0 md:pr-0 flex-col pb-3 border-b md:justify-start gap-10">
       <LeftProject p={project} />
       <RightProject p={project} />
     </div>
