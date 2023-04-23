@@ -67,19 +67,3 @@ body {
     );
   }
 }
-
-/* animation scroll  */
-html {
-  animation: slidein 1s ease-in-out;
-}
-
-@keyframes slidein {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
