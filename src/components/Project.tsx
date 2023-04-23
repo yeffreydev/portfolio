@@ -3,7 +3,6 @@ import Image from "next/image";
 import { IconType } from "react-icons/lib";
 import { GrGithub } from "react-icons/gr";
 import { TbExternalLink } from "react-icons/tb";
-import { ReactElement } from "react";
 
 export interface IRightProject {
   skills: string[];
@@ -66,10 +65,16 @@ const LeftProject = ({ p }: { p: ILeftProject }) => {
         {/*Project description */}
         {Description()}
       </div>
-      <Link target={"_blank"} className="px-3 mx-auto md:mx-0 py-1 flex items-center gap-2 bg-gray-800 w-min whitespace-nowrap rounded-xl" href={source}>
-        <span>Source code</span>
-        <GrGithub />
-      </Link>
+      <div className="flex gap-3">
+        <Link target={"_blank"} className="px-3 hover:opacity-70 mx-auto md:mx-0 py-1 flex items-center gap-2 bg-gray-800 w-min whitespace-nowrap rounded-xl" href={source}>
+          <span>Source code</span>
+          <GrGithub />
+        </Link>
+        <Link target={"_blank"} className="px-3 hover:opacity-70 mx-auto md:mx-0 py-1 flex items-center gap-2 bg-gray-800 w-min whitespace-nowrap rounded-xl" href={url}>
+          <span>Demo</span>
+          <TbExternalLink />
+        </Link>
+      </div>
     </div>
   );
 };
