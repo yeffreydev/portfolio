@@ -19,7 +19,7 @@ const SocialLinks = () => {
 export const ProfileImage = () => {
   return (
     <Image
-      className="w-full h-full object-cover rounded-xl"
+      className="w-full h-full object-cover rounded-full"
       width={455}
       height={610}
       src={"https://media.discordapp.net/attachments/1038833828682272930/1095971212359897098/Screenshot_20230413_021750.jpg?width=455&height=610"}
@@ -31,36 +31,32 @@ export default function HomeSection() {
   return (
     <div id="home" className="min-h-min flex flex-col text-center md:text-left relative pt-[50px]">
       <ContenWidth>
-        <div className="flex flex-col lg:w-9/12 mx-auto  md:flex-row gap-5 md:gap-16 lg:gap-20 mt-10 md:mt-20">
-          <div className="flex-1 flex flex-col gap-3 md:gap-16">
-            <div className="text-center">
+        <div className="flex flex-col md:pl-5 md:flex-row gap-5 md:gap-16 lg:gap-20 mt-10 md:mt-20">
+          <div className="flex-1 lg:flex-auto flex flex-col gap-3 md:gap-10 md:mt-[100px] lg:mt-[200px]">
+            <div className="w-[200px] md:hidden h-[200px] mx-auto border-2 border-cyan-300 rounded-full">
+              <ProfileImage />
+            </div>
+            <div className="text-center md:text-left">
               <h1 className="text-3xl font-bold leading-5">Yeffrey Espinoza </h1>
               <p className="text-cyan-300">sofware Developer</p>
             </div>
-            <div className="md:hidden flex gap-3 mx-auto">
+            <div className="md:hidden mx-auto md:mx-0 flex gap-3">
               <SocialLinks />
             </div>
-            <div className="w-[250px] md:hidden h-[250px] mx-auto border-2 border-cyan-300 rounded-xl">
-              <ProfileImage />
-            </div>
-            <div>
-              <p className="w-11/12 mx-auto md:w-full text-justify px-0 [&>b]:text-cyan-300">
-                As a <b>web developer</b>, you possess a diverse range of technical skills that enable you to create <b>dynamic and interactive websites.</b> <br /> Your proficiency in{" "}
-                <b>object-oriented programming</b>, modern web technologies such as <b>React</b> and <b>Next</b>, and familiarity with <b>databases</b> and <b>server-side</b> technologies such as
-                <b> MongoDB</b>, <b>Express</b>, and <b>Node</b> enable you to build powerful and efficient <b>backend systems</b>. <br />
-                Your expertise in front-end technologies such as <b>JavaScript</b>, <b>Css3</b>, and <b>Tailwind</b> allows you to create responsive and visually appealing <b>user interfaces.</b>
-                <br />
-                Overall, your skills make you a valuable asset to any organization seeking to <b>build high-quality web applications</b>.
+            <div className="mt-3 md:mt-0">
+              <p className="w-10/12 md:w-11/12 md:ml-3 mx-auto text-justify mt-[50px] md:mt-0  px-0 [&>b]:text-cyan-300">
+                A creative developer with a <br className="hidden md:block lg:hidden" />
+                strong track record of <br className="hidden lg:block" /> developing custom software solutions for businesses .
               </p>
             </div>
-            <div className="flex ">
-              <a href={"#contact"} className="text-lg mt-4 md:mt-0 mx-auto font-bold px-10 py-3 rounded-2xl bg-black">
+            <div className="flex mx-auto md:mx-0 md:ml-3">
+              <a href={"#contact"} className=" mt-4 md:mt-0 font-semibold px-10 py-2 rounded-3xl bg-gray-900">
                 Contact Me
               </a>
             </div>
           </div>
-          <div className=" flex flex-col gap-4">
-            <div className="w-[250px] hidden md:block h-[270px] border-2 border-cyan-300 rounded-xl mx-auto md:mx-0">
+          <div className=" flex flex-col gap-4 md:mt-[70px] lg:mt-[150px]">
+            <div className="md:w-[150px]  hidden md:block md:h-[150px]  border-2 border-cyan-300 rounded-full mx-auto md:mx-0">
               <ProfileImage />
             </div>
             <div className="hidden md:flex gap-3">
