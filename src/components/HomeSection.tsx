@@ -46,7 +46,7 @@ export default function HomeSection() {
             <div className="mt-3 md:mt-0">
               <p className="w-10/12 md:w-11/12 md:ml-3 mx-auto text-justify mt-[50px] md:mt-0  px-0 [&>b]:text-cyan-300">
                 A creative developer with a <br className="hidden md:block lg:hidden" />
-                strong track record of <br className="hidden lg:block" /> developing custom software solutions for businesses .
+                strong track record of <br className="hidden lg:block" /> developing custom software solutions for businesses and startups.
               </p>
             </div>
             <div className="flex mx-auto md:mx-0 md:ml-3">
