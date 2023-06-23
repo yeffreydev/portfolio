@@ -8,12 +8,12 @@ function ProductItem() {
         <div className="flex flex-col gap-2">
           <span className="font-semibold text-white">Npm Developer</span>
           <div className="w-full flex justify-between">
-            <span className="text-gray-200 font-bold text-xl">S/. 100</span>
+            <span className="text-white text-opacity-70 font-bold text-xl ">S/. 100.00</span>
             <button className="text-xl">
-              <BsCartPlus />
+              <BsCartPlus color="white" />
             </button>
           </div>
-          <button className="bg-[#FFC700] text-gray-800  py-1 w-11/12 mx-auto rounded-[20px]">comprar</button>
+          <button className="bg-[#FFC700] text-gray-800  py-1 w-full mx-auto rounded-[20px]">comprar</button>
         </div>
       </div>
     </div>
