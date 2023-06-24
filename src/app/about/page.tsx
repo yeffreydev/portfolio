@@ -1,9 +1,20 @@
 import React, { HTMLAttributes } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaTiktok, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { IconType } from "react-icons";
+
+const SocialLink = ({ Icon, url }: { Icon: IconType; url: string }) => {
+  return (
+    <div className=" grid place-items-center">
+      <a className="bg-black w-[50px] h-[50px] rounded-[50px] grid place-items-center hover:border hover:scale-110 hover:bg-[#152c43]" href={url} target={"_blank"}>
+        <Icon className="font-2xl" color="#ffff" />
+      </a>
+    </div>
+  );
+};
 function page() {
   const linkClass: HTMLAttributes<HTMLLinkElement>["className"] = "text-[#fff] underline font-semibold hover:text-[#fff9]";
   return (
-    <div className="mt-[50px] flex">
+    <div className="mt-[50px] flex mb-10">
       <div className="w-11/12 md:w-8/12  lg:w-6/12 mx-auto">
         <h1 className="text-[30px] font-bold mt-3">Yeffrey Espinoza</h1>
         <span className="text-[#fff6]">Software Developer</span>
@@ -44,36 +55,20 @@ function page() {
           I&#39;ve always been fond of technology; then I discovered programming and software development in 2020. Since then, this wonderful journey has unfolded, and I am eager to explore more of
           this world, potentially delving into artificial intelligence.
         </p>
-        <h1 className="text-xl mt-7 text-white">Expirence</h1>
-
-        <div className="flex items-center gap-5">
-          <div className="mt-2 grid place-items-center">
-            <a className="bg-black w-[50px] h-[50px] rounded-[50px] grid place-items-center" href="https://github.com/yeffreydev" target={"_blank"}>
-              <FaGithub className="font-2xl" color="#ffff" />
-            </a>
-          </div>
-          <div className="mt-2 flex flex-col gap-2">
-            <button className="px-5 py-1 rounded-xl bg-black text-white w-min whitespace-nowrap">Download CV</button>
+        <h1 className="text-xl mt-7 text-white">Experience</h1>
+        <div className="flex items-center gap-5 mt-5">
+          <SocialLink Icon={FaGithub} url={"https://github.com/yeffreydev"} />
+          <SocialLink Icon={FaLinkedin} url={"https://www.linkedin.com/in/yeffreydev/"} />
+          <div className="flex flex-col gap-2">
+            <button className="px-5 py-1 rounded-xl bg-black text-white w-min whitespace-nowrap hover:bg-[#152c43]">Download CV</button>
           </div>
         </div>
         <div className="mt-5">
           <h1 className="text-xl text-white">Social Links</h1>
           <div className="flex gap-3 items-center flex-wrap mt-2">
-            <div className=" grid place-items-center">
-              <a className="bg-black w-[50px] h-[50px] rounded-[50px] grid place-items-center" href="https://github.com/yeffreydev">
-                <FaGithub className="font-2xl" color="#ffff" />
-              </a>
-            </div>
-            <div className="grid place-items-center">
-              <a className="bg-black w-[50px] h-[50px] rounded-[50px] grid place-items-center" href="https://github.com/yeffreydev">
-                <FaGithub className="font-2xl" color="#ffff" />
-              </a>
-            </div>
-            <div className="grid place-items-center">
-              <a className="bg-black w-[50px] h-[50px] rounded-[50px] grid place-items-center" href="https://github.com/yeffreydev">
-                <FaGithub className="font-2xl" color="#ffff" />
-              </a>
-            </div>
+            <SocialLink Icon={FaInstagram} url={"https://www.instagram.com/yeffreydev/"} />
+            <SocialLink Icon={FaTiktok} url={"https://www.tiktok.com/@yeffreydev"} />
+            <SocialLink Icon={FaTwitter} url={"https://twitter.com/yeffreydev"} />
           </div>
         </div>
       </div>
