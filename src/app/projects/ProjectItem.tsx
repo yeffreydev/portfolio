@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { BiLinkExternal } from "react-icons/bi";
 function ProjectItem() {
   return (
-    <div className="flex flex-col gap-2 max-w-[400px] mt-5">
+    <div className="flex flex-col gap-2 max-w-[400px] mt-5 hover:bg-gray-600 hover:bg-opacity-50 p-2.5 rounded-lg">
       <div className="bg-black h-[200px] w-full"></div>
       <div className="flex-1">
         <h2 className="text-2xl font-bold">This is a title</h2>
