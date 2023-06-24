@@ -3,7 +3,7 @@ import BlogItem from "./BlogItem";
 
 const Item = () => {
   return (
-    <div className="w-11/12 flex flex-col hover:bg-gray-600 p-2">
+    <div className="w-11/12 flex flex-col hover:bg-gray-600 hover:bg-opacity-50 p-2">
       <div className="w-full grid place-items-center">
         <div className="w-full h-[200px] bg-black"></div>
       </div>
