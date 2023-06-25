@@ -23,7 +23,13 @@ function ProductItem({ src, name, price }: { src: string; name: string; price: n
               <BsCartPlus color="white" />
             </button>
           </div>
-          <button className="bg-[#FFC700] text-gray-800  py-1 w-full mx-auto rounded-[20px] hover:bg-opacity-75 hover:scale-105">comprar</button>
+          <a
+            target={"_blank"}
+            href={`https://api.whatsapp.com/send?phone=51921862850&text=me%20gusta%20el%20item%20%22${name}%22😍%20y%20quiero%20comprarlo%20@yeffreydev`}
+            className="bg-[#FFC700] text-gray-800 text-center  py-1 w-full mx-auto rounded-[20px] hover:bg-opacity-75 hover:scale-105"
+          >
+            comprar
+          </a>
         </div>
       </div>
     </div>
