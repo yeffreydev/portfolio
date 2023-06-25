@@ -18,7 +18,7 @@ function page() {
       <div className="w-11/12 md:w-8/12  lg:w-6/12 mx-auto">
         <h1 className="text-[30px] font-bold mt-3">Yeffrey Espinoza</h1>
         <span className="text-[#fff6]">Software Developer</span>
-        <p className="overflow-auto text-justify mt-7 ">
+        <div className="overflow-auto text-justify mt-7 ">
           <div className="w-[200px] h-[200px] grid place-items-center float-right top-0">
             <img className="w-[150px] h-[150px] rounded-[100px] object-cover" src="https://images.pexels.com/photos/678783/pexels-photo-678783.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
           </div>
@@ -54,7 +54,7 @@ function page() {
           <br />
           I&#39;ve always been fond of technology; then I discovered programming and software development in 2020. Since then, this wonderful journey has unfolded, and I am eager to explore more of
           this world, potentially delving into artificial intelligence.
-        </p>
+        </div>
         <h1 className="text-xl mt-7 text-white">Experience</h1>
         <div className="flex items-center gap-5 mt-5">
           <SocialLink Icon={FaGithub} url={"https://github.com/yeffreydev"} />
