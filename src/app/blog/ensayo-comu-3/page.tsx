@@ -4,7 +4,7 @@ function page() {
   return (
     <div className="my-[80px] w-full px-5 md:w-8/12 lg:w-7/12 mx-auto">
       <div className={`${styles["blog-content"]} border`}>
-        <h1 className="bold text-xl">La influencia de la educación en la corrupción</h1>
+        <h1 className="text-xl font-semibold">La influencia de la educación en la corrupción</h1>
         <br />
         A lo largo de los años, la corrupción ha sido un problema constante en nuestra sociedad, esta problemática se origina en la educación. Por ello nos formulamos la pregunta: ¿Es posible que los
         líderes políticos peruanos luchen contra la corrupción si ellos mismos no han recibido una educación que les inculque valores éticos y morales sólidos? No podemos esperar un buen liderazgo de
@@ -34,6 +34,38 @@ function page() {
         convertirse en buenos líderes y así combatir la corrupción. Es fundamental invertir en programas educativos que promuevan una formación ética, transparente y responsable. Además, se debe
         fomentar la participación ciudadana, promover una cultura de denuncia y rendición de cuentas, y enseñar sobre los derechos, responsabilidades y mecanismos legales para enfrentar y prevenir la
         corrupción. Es la escasez de estos aspectos en la educación la que nos ha dejado en el mayor problema político actual, la corrupción.
+        <br />
+        <br />
+        <h1 className="underline">REFERENCIAS</h1>
+        <div className=" text-left">
+          Azcueta M. (2019). Hay que cambiar el chip y educar para el futuro{" "}
+          <a target="_blank" className="underline text-blue-500 whitespace-normal break-words" href="https://drehuancavelica.gob.pe/notas-de-prensa/hay-que-cambiar-el-chip-y-educar-para-el-futuro/">
+            https://drehuancavelica.gob.pe/notas-de-prensa/hay-que-cambiar-el-chip-y-educar-para-el-futuro/
+          </a>
+          <br />
+          Ediciones Corefo (2021) Recomendaciones para mejorar la educación peruana en el Bicentenario{" "}
+          <a
+            target="_blank"
+            className="underline text-blue-500 whitespace-normal break-words"
+            href="https://padres.corefonet.com/recomendaciones-para-mejorar-la-educacion-peruana-en-el-bicentenario/"
+          >
+            https://padres.corefonet.com/recomendaciones-para-mejorar-la-educacion-peruana-en-el-bicentenario/
+          </a>
+          <br />
+          Flores Quelopana G. (2019). Educación y corrupción.{" "}
+          <a target="_blank" className="underline text-blue-500 whitespace-normal break-words" href="Flores Quelopana G. (2019). Educación y corrupción.">
+            Flores Quelopana G. (2019). Educación y corrupción.
+          </a>
+          <br />
+          MPFN. (2020). CÓMO PREVENIR LA CORRUPCIÓN{" "}
+          <a
+            target="_blank"
+            className="underline text-blue-500 whitespace-normal break-words"
+            href="https://www.mpfn.gob.pe/fiscalias_anticorrupcion/prevencion/#:~:text=Fortalecer%20la%20Comisi%C3%B3n%20de%20Alto,act%C3%BAen%20con%20la%20mayor%20objetividad"
+          >
+            https://www.mpfn.gob.pe/fiscalias_anticorrupcion/prevencion/#:~:text=Fortalecer%20la%20Comisi%C3%B3n%20de%20Alto,act%C3%BAen%20con%20la%20mayor%20objetividad
+          </a>
+        </div>
       </div>
     </div>
   );
