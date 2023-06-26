@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="mt-[50px] mb-10">
+    <div className="mt-[70px] mb-10">
       <div className={`${styles["grid-products"]} md:w-11/12 mx-auto`}>
         <ProductItem price={60} name="Y dev white shirt" src="/ydevwhiteshirt.png" />
         <ProductItem price={60} name="gatito amor" src="/gato-shirt.png" />

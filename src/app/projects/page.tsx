@@ -29,7 +29,7 @@ const projects = [
 
 function page() {
   return (
-    <div className="mt-[70px] w-11/12 mx-auto flex flex-wrap gap-3 justify-center">
+    <div className="mt-[70px] mb-10 w-11/12 mx-auto flex flex-wrap gap-3 justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {projects.map((project, index) => {
           return <ProjectItem image={project.image} codeLink={project.codeLink} deployLink={project.deployLink} key={index} description={project.description} title={project.title} />;

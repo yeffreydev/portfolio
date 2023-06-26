@@ -14,7 +14,7 @@ const SocialLink = ({ Icon, url }: { Icon: IconType; url: string }) => {
 function page() {
   const linkClass: HTMLAttributes<HTMLLinkElement>["className"] = "text-[#fff] underline font-semibold hover:text-[#fff9]";
   return (
-    <div className="mt-[50px] flex mb-10">
+    <div className="mt-[70px] flex mb-10">
       <div className="w-11/12 md:w-8/12  lg:w-6/12 mx-auto">
         <h1 className="text-[30px] font-bold mt-3">Yeffrey Espinoza</h1>
         <span className="text-[#fff6]">Software Developer</span>
