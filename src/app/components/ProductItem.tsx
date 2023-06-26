@@ -16,11 +16,11 @@ function ProductItem({ src, name, price }: { src: string; name: string; price: n
           <img className="w-full h-full absolute object-contain hover:scale-105 transition-all ease-in-out duration-300" src={src} alt="" />
         </div>
         <div className="flex flex-col gap-2">
-          <span className="font-semibold text-white item-name">{name}</span>
+          <span className="font-semibold text-[#383c3c] item-name">{name}</span>
           <div className="w-full flex justify-between">
-            <span className="text-white text-opacity-70 font-bold text-xl ">S/. {price.toFixed(2)}</span>
+            <span className="text-[#383c3c] text-opacity-70 font-bold text-xl ">S/. {price.toFixed(2)}</span>
             <button className="text-xl hover:scale-125">
-              <BsCartPlus color="white" />
+              <BsCartPlus className="text-3xl" color="#383c3c" />
             </button>
           </div>
           <a

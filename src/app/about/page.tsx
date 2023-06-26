@@ -1,26 +1,27 @@
 import React, { HTMLAttributes } from "react";
 import { FaGithub, FaInstagram, FaTiktok, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { IconType } from "react-icons";
+import Image from "next/image";
 
 const SocialLink = ({ Icon, url }: { Icon: IconType; url: string }) => {
   return (
     <div className=" grid place-items-center">
-      <a className="bg-black w-[50px] h-[50px] rounded-[50px] grid place-items-center hover:border hover:scale-110 hover:bg-[#152c43]" href={url} target={"_blank"}>
+      <a className="bg-[#383c3c] w-[50px] h-[50px] rounded-[50px] grid place-items-center hover:border hover:scale-110 hover:bg-[#152c43]" href={url} target={"_blank"}>
         <Icon className="font-2xl" color="#ffff" />
       </a>
     </div>
   );
 };
 function page() {
-  const linkClass: HTMLAttributes<HTMLLinkElement>["className"] = "text-[#fff] underline font-semibold hover:text-[#fff9]";
+  const linkClass: HTMLAttributes<HTMLLinkElement>["className"] = "text-[#383c3c] underline font-semibold hover:text-[#fff9]";
   return (
     <div className="mt-[70px] flex mb-10">
       <div className="w-11/12 md:w-8/12  lg:w-6/12 mx-auto">
         <h1 className="text-[30px] font-bold mt-3">Yeffrey Espinoza</h1>
-        <span className="text-[#fff6]">Software Developer</span>
+        <span className="text-[#383c3c66]">Software Developer</span>
         <div className="overflow-auto text-justify mt-7 ">
           <div className="w-[200px] h-[200px] grid place-items-center float-right top-0">
-            <img className="w-[150px] h-[150px] rounded-[100px] object-cover" src="https://images.pexels.com/photos/678783/pexels-photo-678783.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
+            <Image width={150} height={150} className="w-[150px] h-[150px] rounded-[100px] object-cover" src="/my_profile.jpg" alt="" />
           </div>
           I am a software developer, born in{" "}
           <a className={linkClass} href="https://en.wikipedia.org/wiki/Per%c3%ba" target={"_blank"}>
@@ -55,16 +56,16 @@ function page() {
           I&#39;ve always been fond of technology; then I discovered programming and software development in 2020. Since then, this wonderful journey has unfolded, and I am eager to explore more of
           this world, potentially delving into artificial intelligence.
         </div>
-        <h1 className="text-xl mt-7 text-white">Experience</h1>
+        <h1 className="text-xl font-semibold mt-7 text-[#383c3c]">Experience</h1>
         <div className="flex items-center gap-5 mt-5">
           <SocialLink Icon={FaGithub} url={"https://github.com/yeffreydev"} />
           <SocialLink Icon={FaLinkedin} url={"https://www.linkedin.com/in/yeffreydev/"} />
           <div className="flex flex-col gap-2">
-            <button className="px-5 py-1 rounded-xl bg-black text-white w-min whitespace-nowrap hover:bg-[#152c43]">Download CV</button>
+            <button className="px-5 py-1 rounded-xl bg-[#383c3c] text-white w-min whitespace-nowrap hover:bg-[#152c43]">Download CV</button>
           </div>
         </div>
         <div className="mt-5">
-          <h1 className="text-xl text-white">Social Links</h1>
+          <h1 className="text-xl font-semibold text-[#383c3c]">Social Links</h1>
           <div className="flex gap-3 items-center flex-wrap mt-2">
             <SocialLink Icon={FaInstagram} url={"https://www.instagram.com/yeffreydev/"} />
             <SocialLink Icon={FaTiktok} url={"https://www.tiktok.com/@yeffreydev"} />

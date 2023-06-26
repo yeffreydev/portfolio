@@ -3,12 +3,12 @@ import BlogItem from "./BlogItem";
 
 const Item = () => {
   return (
-    <div className="w-11/12 flex flex-col hover:bg-gray-600 hover:bg-opacity-50 p-2">
+    <div className="w-11/12 flex flex-col hover:bg-[#6bc1c1] hover:bg-opacity-30 p-2">
       <div className="w-full grid place-items-center">
         <div className="w-full h-[200px] bg-black"></div>
       </div>
       <div className="w-full">
-        <h3 className="text-white">Item Name</h3>
+        <h3 className="text-[#383c3c]">Item Name</h3>
         <p>S/ 100</p>
       </div>
     </div>

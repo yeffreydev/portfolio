@@ -2,8 +2,10 @@ import { Metadata } from "next";
 import ProductItem from "./components/ProductItem";
 import styles from "./page.module.css";
 export const metadata: Metadata = {
-  title: "Yeffrey Espinoza - Home",
+  title: "Home - Yeffrey Espinoza",
+
   description: "I' Yeffrey Espinoza, software developer, this is my portfolio, I from Peru. Software Developer(frontend, backend, fullstack, nextjs, next 13, node, express)",
+  keywords: "Yeffrey Espinoza, Yeffrey, Espinoza, software developer, fullstack, nextjs, next 13, node, express, yeffrey dev, yeffrey espinoza portfolio",
 };
 
 export default function HomePage() {
