@@ -1,5 +1,5 @@
 "use client";
-import { MouseEventHandler, useEffect, useState } from "react";
+import { LegacyRef, MouseEventHandler, useEffect, useRef, useState } from "react";
 import logo from "./../../public/white_logo.svg";
 import Image from "next/image";
 import { IconType } from "react-icons";
@@ -15,15 +15,15 @@ const NavBarItem = ({ link, title }: { link?: string; title?: string; Icon?: Ico
     </li>
   );
 };
-const NavBarItemMobile = ({ link, title, Icon, imgSrc }: { link?: string; title?: string; Icon?: IconType; imgSrc?: string }) => {
+const NavBarItemMobile = ({ link, title, Icon, imgSrc, click }: { link?: string; title?: string; Icon?: IconType; imgSrc?: string; click?: MouseEventHandler }) => {
   return (
     <li className="border-b hover:bg-white hover:bg-opacity-10 relative border-white border-opacity-20 flex h-[50px] items-center justify-end">
       {link ? (
-        <Link className="w-full pr-5 items-center justify-end  flex h-full absolute" href={link}>
+        <Link onClick={click} className="w-full pr-5 items-center justify-end  flex h-full absolute" href={link}>
           <span>{title}</span>
         </Link>
       ) : (
-        <button className="flex items-center pr-5 w-full justify-end h-full  gap-3">
+        <button onClick={click} className="flex items-center pr-5 w-full justify-end h-full  gap-3">
           <span>{title} </span>
           {Icon && <Icon />} {imgSrc && <Image src={imgSrc} alt="icon" width={20} height={20} />}
         </button>
@@ -42,18 +42,19 @@ const NavBar = () => {
     </nav>
   );
 };
-const NavBarMobile = ({ isOpen }: { isOpen: boolean }) => {
+const NavBarMobile = ({ isOpen, myRef, click }: { isOpen: boolean; myRef: LegacyRef<HTMLUListElement> | undefined; click: MouseEventHandler }) => {
   return (
     <ul
+      ref={myRef}
       className={`${
         isOpen ? "w-full" : "w-0"
-      } flex max-w-[300px] overflow-hidden right-0 transition-all duration-200 bg-[#323535] backdrop-filter backdrop-blur-md shadow-sm bg-opacity-90 h-[calc(100vh-65px)] md:hidden  flex-col w-full fixed z-10 top-[65px] `}
+      } flex max-w-[300px] overflow-hidden right-0 transition-all duration-200 bg-[#323535] backdrop-filter backdrop-blur-md shadow-sm bg-opacity-90 h-[calc(100vh-65px)] md:hidden  flex-col fixed z-10 top-[65px] `}
     >
-      <NavBarItemMobile title="Dark" Icon={FiMoon} />
-      <NavBarItemMobile title="EN" imgSrc="https://cdn-icons-png.flaticon.com/128/197/197374.png" />
-      <NavBarItemMobile link="/projects" title="Projects" />
-      <NavBarItemMobile link="/blog" title="Blog" />
-      <NavBarItemMobile link="/about" title="About" />
+      <NavBarItemMobile click={click} title="Dark" Icon={FiMoon} />
+      <NavBarItemMobile click={click} title="EN" imgSrc="https://cdn-icons-png.flaticon.com/128/197/197374.png" />
+      <NavBarItemMobile click={click} link="/projects" title="Projects" />
+      <NavBarItemMobile click={click} link="/blog" title="Blog" />
+      <NavBarItemMobile click={click} link="/about" title="About" />
     </ul>
   );
 };
@@ -102,13 +103,34 @@ export default function Header() {
   const [navColur, setNavColour] = useState(false);
   const [activeNav, setActiveNav] = useState(false);
 
+  const navRef = useRef<HTMLUListElement>(null);
+  const menuIconContainerRef = useRef<HTMLDivElement>(null);
+
   const handleToggleNav = () => {
     setActiveNav(!activeNav);
   };
+
   useEffect(() => {
     const srollHandler = () => setNavColour(window ? window.scrollY > 5 : false);
     window ? window.addEventListener("scroll", srollHandler) : false;
   }, []);
+
+  const closeNav = () => {
+    setActiveNav(false);
+  };
+
+  const handleDownOutsideNav = (e: MouseEvent) => {
+    const isNavContainE = navRef.current?.contains(e.target as Node);
+    const isMenuContainE = menuIconContainerRef.current?.contains(e.target as Node);
+    if (!isNavContainE && !isMenuContainE) {
+      closeNav();
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("click", handleDownOutsideNav);
+  }
+
   return (
     <div
       className={`items-center border-b border-white border-opacity-5 w-full z-10 bg-[#323535] fixed top-0 flex h-[65px] transition-[top] duration-200 ease-out ${
@@ -122,13 +144,12 @@ export default function Header() {
           </Link>
         </div>
         <NavBar />
-        <NavBarMobile isOpen={activeNav} />
+        <NavBarMobile click={closeNav} myRef={navRef} isOpen={activeNav} />
         <div className="flex gap-5 items-center">
           <ThemeButtton />
           <LangButton />
           <CartButton />
-
-          <div className="relative  w-[50px] h-[50px] md:hidden grid place-items-center">
+          <div ref={menuIconContainerRef} className="relative  w-[30px] h-[30px] md:hidden grid place-items-center">
             <MenuButton isOpen={activeNav} toggle={handleToggleNav} />
             <MenuButtonX isOpen={activeNav} toggle={handleToggleNav} />
           </div>
