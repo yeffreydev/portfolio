@@ -17,12 +17,9 @@ const Item = () => {
 
 function page() {
   return (
-    <div className="mt-[60px] w-11/12 mx-auto flex gap-3">
+    <div className="mt-[80px] mb-[40px] w-11/12 mx-auto flex gap-3">
       <div className="flex-1">
-        <BlogItem />
-        <BlogItem />
-        <BlogItem />
-        <BlogItem />
+        <BlogItem id="ensayo-comu-3" title="La influencia de la educación en la corrupción" year="2023" />
       </div>
       <div className="w-[300px] hidden md:block">
         <h2 className="my-3 text-2xl w-11/12 mx-auto">last merch</h2>
