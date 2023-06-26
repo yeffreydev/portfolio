@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { BsCartPlus } from "react-icons/bs";
 function ProductItem({ src, name, price }: { src: string; name: string; price: number }) {
@@ -13,7 +14,7 @@ function ProductItem({ src, name, price }: { src: string; name: string; price: n
       </style>
       <div className="w-[300px] h-[400px] flex flex-col gap-1">
         <div className="flex-1 relative overflow-hidden">
-          <img className="w-full h-full absolute object-contain hover:scale-105 transition-all ease-in-out duration-300" src={src} alt="" />
+          <Image width={300} height={400} className="w-full h-full absolute object-contain hover:scale-105 transition-all ease-in-out duration-300" src={src} alt="" />
         </div>
         <div className="flex flex-col gap-2">
           <span className="font-semibold text-[#383c3c] item-name">{name}</span>
