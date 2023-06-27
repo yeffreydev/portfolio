@@ -95,9 +95,9 @@ const MenuButtonX = ({ toggle, isOpen }: { toggle: MouseEventHandler<HTMLButtonE
 
 const CartButton = () => {
   return (
-    <button>
+    <Link href={"/cart"}>
       <FiShoppingCart className="text-2xl" />
-    </button>
+    </Link>
   );
 };
 export default function Header() {

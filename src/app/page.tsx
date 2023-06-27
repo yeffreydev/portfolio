@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ProductItem from "./components/ProductItem";
+import ProductItem from "./ProductItem";
 import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Home - Yeffrey Espinoza",
