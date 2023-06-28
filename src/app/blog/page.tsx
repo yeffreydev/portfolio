@@ -29,8 +29,8 @@ function page() {
       <div className="w-[300px] hidden md:block">
         <h2 className="my-3 text-2xl w-11/12 mx-auto">last Items</h2>
         <div className="flex flex-col gap-5 items-center">
-          <Item src="/ydevwhiteshirt.png" name="Y dev Shirt" price={50} />
-          <Item src="/ydevblackshirt.png" name="Y dev Black Shirt" price={50} />
+          <Item src="/ydevwhiteshirt.png" name="Y dev Shirt" price={60} />
+          <Item src="/ydevblackshirt.png" name="Y dev Black Shirt" price={60} />
         </div>
       </div>
     </div>

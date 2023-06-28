@@ -12,9 +12,9 @@ export default function HomePage() {
   return (
     <div className="mt-[70px] mb-10">
       <div className={`${styles["grid-products"]} md:w-11/12 mx-auto`}>
-        <ProductItem id="0" price={50} name="Y dev white shirt" src="/ydevwhiteshirt.png" />
-        <ProductItem id="1" price={50} name="gatito amor" src="/gato-shirt.png" />
-        <ProductItem id="2" price={50} name="Y dev black shirt" src="/ydevblackshirt.png" />
+        <ProductItem id="0" price={60} name="Y dev white shirt" src="/ydevwhiteshirt.png" />
+        <ProductItem id="1" price={60} name="gatito amor" src="/gato-shirt.png" />
+        <ProductItem id="2" price={60} name="Y dev black shirt" src="/ydevblackshirt.png" />
       </div>
     </div>
   );

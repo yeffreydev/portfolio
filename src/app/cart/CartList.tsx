@@ -6,6 +6,11 @@ import { ICartItem } from "../types";
 import Image from "next/image";
 import Link from "next/link";
 
+const generateCheckoutLink = ({ items }: { items: ICartItem[] }) => {
+  const formattedItems = items.map((item) => `${item.count} del item "${item.name}"`);
+  const checkoutLink = `https://api.whatsapp.com/send?phone=51921862850&text=Me%20gustan%20los%20items%20${formattedItems.join(", ")}%20😍%20y%20quiero%20comprarlos%20@yeffreydev`;
+  return checkoutLink;
+};
 const CartItem = ({ item }: { item: ICartItem }) => {
   const { addToCart, decreaseItemCount } = useContext(AppContext);
   const handleAddToCart = () => {
@@ -52,6 +57,7 @@ export default function CartList() {
     );
   }
 
+  const handleCheckout = () => {};
   return (
     <div>
       <div className="overflow-auto flex flex-col gap-5">
@@ -61,7 +67,9 @@ export default function CartList() {
         <div className="h-[200px] flex flex-col gap-3 mt-[50px] mb-[50px] pr-10 items-end w-full">
           <span className="text-xl">Total S/.{cart.reduce((acc, item) => acc + item.price * item.count, 0).toFixed(2)}</span>
           <span className="text-sm">Shipping & taxes calculated at checkout</span>
-          <button className="bg-black text-white p-2 rounded-md">Checkout</button>
+          <a href={generateCheckoutLink({ items: cart })} target="_blank" rel="noreferrer" className="bg-black text-white p-2 rounded-md">
+            Checkout
+          </a>
         </div>
       </div>
     </div>
