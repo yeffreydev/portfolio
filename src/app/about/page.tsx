@@ -61,7 +61,9 @@ function page() {
           <SocialLink Icon={FaGithub} url={"https://github.com/yeffreydev"} />
           <SocialLink Icon={FaLinkedin} url={"https://www.linkedin.com/in/yeffreydev/"} />
           <div className="flex flex-col gap-2">
-            <button className="px-5 py-1 rounded-xl bg-[#383c3c] text-white w-min whitespace-nowrap hover:bg-[#152c43]">Download CV</button>
+            <a href="/en-cv.pdf" target={"_blank"} className="px-5 py-1 rounded-xl bg-[#383c3c] text-white w-min whitespace-nowrap hover:bg-[#152c43]">
+              Download CV
+            </a>
           </div>
         </div>
         <div className="mt-5">
