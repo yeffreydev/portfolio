@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { BsCartPlus } from "react-icons/bs";
-function ProductItem({ src, name, price }: { src: string; name: string; price: number }) {
+import { AddToCartBtn } from "./AddToCartBtn";
+function ProductItem({ src, name, price, id }: { src: string; name: string; price: number; id: string }) {
   return (
     <div className="container border-[.5px] border-white border-opacity-5 w-full h-[450px] grid place-content-center hover:bg-opacity-30 p-2.5">
       <style jsx>
@@ -20,9 +20,7 @@ function ProductItem({ src, name, price }: { src: string; name: string; price: n
           <span className="font-semibold text-[#383c3c] item-name">{name}</span>
           <div className="w-full flex justify-between">
             <span className="text-[#383c3c] text-opacity-70 font-bold text-xl ">S/. {price.toFixed(2)}</span>
-            <button className="text-xl hover:scale-125">
-              <BsCartPlus className="text-3xl" color="#383c3c" />
-            </button>
+            <AddToCartBtn id={id} name={name} price={price} />
           </div>
           <a
             target={"_blank"}

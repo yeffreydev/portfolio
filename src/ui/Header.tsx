@@ -1,11 +1,12 @@
 "use client";
-import { LegacyRef, MouseEventHandler, useEffect, useRef, useState } from "react";
+import { LegacyRef, MouseEventHandler, useContext, useEffect, useRef, useState } from "react";
 // import logo from "./../../public/white_logo.svg";
 import darkLogo from "./../../public/dark_logo.svg";
 import Image from "next/image";
 import { IconType } from "react-icons";
 import { FiSun, FiMoon, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
+import { AppContext } from "@/app/AppProvider";
 
 const NavBarItem = ({ link, title }: { link?: string; title?: string; Icon?: IconType }) => {
   return (
@@ -94,8 +95,11 @@ const MenuButtonX = ({ toggle, isOpen }: { toggle: MouseEventHandler<HTMLButtonE
 };
 
 const CartButton = () => {
+  const { cart } = useContext(AppContext);
+  const count = cart.reduce((acc, curr) => acc + curr.count, 0);
   return (
-    <Link href={"/cart"}>
+    <Link className="relative" href={"/cart"}>
+      {count > 0 && <span className="text-red-500 absolute text-sm font-bold top-[-13px] right-[-8px]">{count > 8 ? "+9" : count}</span>}
       <FiShoppingCart className="text-2xl" />
     </Link>
   );

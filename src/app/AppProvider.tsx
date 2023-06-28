@@ -17,7 +17,17 @@ export const AppContext = createContext(initialState);
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [cart, setCart] = useState(initialState.cart);
   const addToCart = (item: ICartItem) => {
-    setCart([item, ...cart]);
+    let foundItem = cart.find((cartItem) => cartItem.id === item.id);
+    if (!foundItem) {
+      setCart([item, ...cart]);
+    } else {
+      setCart(
+        cart.map((cartItem) => {
+          if (item.id === cartItem.id) cartItem.count++;
+          return cartItem;
+        })
+      );
+    }
   };
   const removeFromCart = (item: ICartItem) => {
     setCart(cart.filter((cartItem) => cartItem.id !== item.id));
