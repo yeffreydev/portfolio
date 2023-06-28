@@ -7,6 +7,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CartItem = ({ item }: { item: ICartItem }) => {
+  const { addToCart, decreaseItemCount } = useContext(AppContext);
+  const handleAddToCart = () => {
+    addToCart(item);
+  };
+  const handleDecrease = () => {
+    decreaseItemCount(item);
+  };
   return (
     <div className=" flex gap-10  min-h-[200px] w-full pl-5">
       <div className="relative h-[200px] w-[150px] ">
@@ -14,9 +21,9 @@ const CartItem = ({ item }: { item: ICartItem }) => {
       </div>
       <div className="flex flex-col gap-1 h-[200px] justify-end pb-5">
         <div className="text-[70px] flex gap-5 items-center">
-          <button>-</button>
+          <button onClick={handleDecrease}>-</button>
           <span>{item.count}</span>
-          <button>+</button>
+          <button onClick={handleAddToCart}>+</button>
         </div>
         <div className="">
           <span>{item.name}</span>
