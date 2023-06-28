@@ -20,7 +20,7 @@ function ProductItem({ src, name, price, id }: { src: string; name: string; pric
           <span className="font-semibold text-[#383c3c] item-name">{name}</span>
           <div className="w-full flex justify-between">
             <span className="text-[#383c3c] text-opacity-70 font-bold text-xl ">S/. {price.toFixed(2)}</span>
-            <AddToCartBtn id={id} name={name} price={price} />
+            <AddToCartBtn img={src} id={id} name={name} price={price} />
           </div>
           <a
             target={"_blank"}
