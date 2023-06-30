@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./blog.module.css";
 function page() {
   return (
-    <div className="my-[80px] w-full px-5 md:w-8/12 lg:w-7/12 mx-auto">
+    <div className="my-[80px] w-full px-5 md:w-9/12 mx-auto">
       <div className={`${styles["blog-content"]} border`}>
         <h1 className="text-xl font-semibold">La influencia de la educación en la corrupción en el Perú</h1>
         <br />

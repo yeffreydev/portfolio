@@ -1,6 +1,6 @@
 "use client";
 import { ReactNode, createContext, useState } from "react";
-import { ICartItem } from "./types";
+import { ICartItem } from "./shop/types";
 
 interface IAppState {
   cart: ICartItem[];

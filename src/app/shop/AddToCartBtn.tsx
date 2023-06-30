@@ -1,7 +1,7 @@
 "use client";
 import { useContext } from "react";
 import { BsCartPlus } from "react-icons/bs";
-import { AppContext } from "./AppProvider";
+import { AppContext } from "../AppProvider";
 
 export const AddToCartBtn = ({ id, name, price, img }: { id: string; name: string; price: number; img: string }) => {
   const { addToCart } = useContext(AppContext);

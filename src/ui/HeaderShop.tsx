@@ -153,7 +153,7 @@ export default function Header() {
         <div className="flex gap-5 items-center">
           {/* <ThemeButtton /> */}
           {/* <LangButton /> */}
-          {/* <CartButton /> */}
+          <CartButton />
           <div ref={menuIconContainerRef} className="relative  w-[30px] h-[30px] md:hidden grid place-items-center">
             <MenuButton isOpen={activeNav} toggle={handleToggleNav} />
             <MenuButtonX isOpen={activeNav} toggle={handleToggleNav} />

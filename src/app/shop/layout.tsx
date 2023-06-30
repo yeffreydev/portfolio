@@ -1,15 +1,17 @@
 import Header from "@/ui/HeaderShop";
 
 export const metadata = {
-  title: "Cart",
+  title: "yeffreydev shop",
   description: "",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <Header />
-      {children}
-    </>
+    <html lang="en">
+      <body>
+        <Header />
+        {children}
+      </body>
+    </html>
   );
 }
