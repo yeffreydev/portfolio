@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 const Item = ({ src, name, price }: { src: string; name: string; price: number }) => {
   return (
-    <Link href={"/"} className="w-11/12 flex flex-col gap-4 hover:bg-[#6bc1c1] bg-blue-400 bg-opacity-25 hover:bg-opacity-30 p-2">
+    <Link href={"/shop"} className="w-11/12 flex flex-col gap-4 hover:bg-[#6bc1c1] bg-blue-400 bg-opacity-25 hover:bg-opacity-30 p-2">
       <div className="w-full grid place-items-center">
         <Image src={src} width={250} height={200} className="w-full p-2 bg-red-400 bg-opacity-10 h-[200px] object-contain" alt=""></Image>
       </div>

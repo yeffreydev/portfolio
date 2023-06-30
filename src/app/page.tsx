@@ -14,7 +14,7 @@ const SocialLink = ({ Icon, url }: { Icon: IconType; url: string }) => {
   );
 };
 function page() {
-  const linkClass: HTMLAttributes<HTMLLinkElement>["className"] = "text-[#383c3c] underline font-semibold hover:text-[#fff9]";
+  const linkClass: HTMLAttributes<HTMLLinkElement>["className"] = "text-[#383c3c] underline font-semibold hover:text-opacity-70";
   return (
     <>
       <Header />
@@ -26,7 +26,7 @@ function page() {
             <div className="w-full max-w-[300px] h-[202px] grid place-items-center float-right top-0">
               <Image width={200} height={200} className="w-[150px] h-[150px] rounded-[100px] object-cover" src="/my_profile.jpg" alt="" />
             </div>
-            I am a software developer, born in{" "}
+            I&#39;m a software developer, born in{" "}
             <a className={linkClass} href="https://en.wikipedia.org/wiki/Per%c3%ba" target={"_blank"}>
               Peru
             </a>
