@@ -1,4 +1,6 @@
 .blog-content {
   font-family: "Times New Roman", Times, serif;
   text-align: left;
+  line-height: 2;
+  font-size: 12pt;
 }
