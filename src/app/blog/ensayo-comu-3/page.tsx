@@ -2,9 +2,12 @@ import React from "react";
 import styles from "./blog.module.css";
 function page() {
   return (
-    <div className="my-[80px] w-full p-5 md:p-[96px]">
+    <div className="my-[80px] w-full p-5 md:px-[96px]">
       <div className={`${styles["blog-content"]} border`}>
         <h1 className="text-xl font-semibold">La influencia de la educación en la corrupción en el Perú</h1>
+        <p className="text-sm font-light text-gray-500">
+          <time dateTime="2023-06-28">28 de Junio del 2023 </time>
+        </p>
         <br />
         A lo largo de los años, la corrupción ha sido un problema constante en nuestra sociedad, esta problemática se origina en la educación. Por ello nos formulamos la pregunta: ¿Es posible que los
         líderes políticos peruanos luchen contra la corrupción si ellos mismos no han recibido una educación que les inculque valores éticos y morales sólidos? No podemos esperar un buen liderazgo de
