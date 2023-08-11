@@ -38,8 +38,9 @@ const NavBar = () => {
     <nav className="pr-3 hidden md:block">
       <ul className="flex  w-ful justify-end gap-5 md:gap-10">
         <NavBarItem link="/" title="Home" />
-        <NavBarItem link="/projects" title="Projects" />
+        {/* <NavBarItem link="/projects" title="Projects" /> */}
         <NavBarItem link="/blog" title="Blog" />
+        <NavBarItem link="/nodejs-course" title="NodeJS Course" />
       </ul>
     </nav>
   );
@@ -55,8 +56,9 @@ const NavBarMobile = ({ isOpen, myRef, click }: { isOpen: boolean; myRef: Legacy
       {/* <NavBarItemMobile click={click} title="Dark" Icon={FiMoon} /> */}
       {/* <NavBarItemMobile click={click} title="EN" imgSrc="https://cdn-icons-png.flaticon.com/128/197/197374.png" /> */}
       <NavBarItemMobile click={click} link="/" title="Home" />
-      <NavBarItemMobile click={click} link="/projects" title="Projects" />
+      {/* <NavBarItemMobile click={click} link="/projects" title="Projects" /> */}
       <NavBarItemMobile click={click} link="/blog" title="Blog" />
+      <NavBarItemMobile click={click} link="/nodejs-course" title="NodeJS Course" />
     </ul>
   );
 };

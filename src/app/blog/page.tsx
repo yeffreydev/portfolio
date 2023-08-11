@@ -21,9 +21,7 @@ function page() {
     <div className="mt-[80px] mb-[40px] w-11/12 mx-auto flex gap-3">
       <div className="flex-1">
         <h1 className="text-xl font-bold pl-2">latest articles</h1>
-        <div className="flex-1">
-          <BlogItem id="ensayo-comu-3" title="La influencia de la educación en la corrupción" year="2023" />
-        </div>
+        <div className="flex-1">{/* <BlogItem id="ensayo-comu-3" title="La influencia de la educación en la corrupción" year="2023" /> */}</div>
       </div>
 
       <div className="w-[300px] hidden md:block">
