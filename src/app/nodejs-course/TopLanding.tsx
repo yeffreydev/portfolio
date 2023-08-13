@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 export default function TopLanding() {
   return (
     <div className="flex flex-col items-start w-11/12 mx-auto mt-20 gap-5">
@@ -14,7 +15,7 @@ export default function TopLanding() {
           <Image src={"https://th.bing.com/th/id/OIP.hv_EzUOseMZeJiHvRn9LEwHaEh?pid=ImgDet&rs=1"} width={300} height={200} alt="nodejs img" />
         </div>
       </div>
-      <button className="bg-black rounded-3xl text-white px-7 py-2">Ingresar al Curso</button>
+      <Link href="/nodejs-course/login" className="bg-black rounded-3xl text-white px-7 py-2">Ingresar al Curso</Link>
     </div>
   );
 }
