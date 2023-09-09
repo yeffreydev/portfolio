@@ -11,7 +11,7 @@ const WeekContainer: React.FC<Props> = ({ children, title }) => {
   const handleOpenContent = () => setIsOpen(!isOpen);
   return (
     <div className="ml-2 bg-[#cce5e5]">
-      <div onClick={handleOpenContent} className="flex items-center cursor-pointer bg-[#3b4747] rounded-b-xl">
+      <div onClick={handleOpenContent} className="flex items-center cursor-pointer bg-[#89a2a2] rounded-b-xl">
         <span className="text-white">{isOpen ? <FaAngleDown /> : <FaAngleRight />}</span> <h3 className="text-lg text-white font-semibold">{title}</h3>
       </div>
       <div className={`mx-2 flex-col gap-3 mt-2 ${isOpen ? "flex" : "hidden"}`}>{children}</div>
