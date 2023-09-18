@@ -1,12 +1,13 @@
 import { Menu } from "./Menu";
 import { courseData } from "../course";
-import { OpenMenu } from "./MenuController";
+import { OpenMenu, CloseMenuHook } from "./MenuController";
 import { Chapter } from "./Chapter";
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <div className="mx-auto w-full md:w-11/12 pb-[50px]">
       <Menu />
+      <CloseMenuHook />
       <div className="flex flex-col md:flex-row  py-2 items-center justify-between">
         <OpenMenu />
       </div>

@@ -13,3 +13,9 @@ export const OpenMenu = () => {
     </button>
   );
 };
+
+export const CloseMenuHook = () => {
+  const { setOpenMenu } = useContext(Context);
+  setOpenMenu(false);
+  return null;
+};

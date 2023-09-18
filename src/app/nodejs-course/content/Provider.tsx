@@ -33,7 +33,6 @@ export const Provider = ({ children }: { children: ReactNode }) => {
       return { ...topic, open: false };
     });
     setSubtopics(newTopics);
-    setOpenMenu(false);
   };
 
   return <Context.Provider value={{ topics, handleTopicOpen, openMenu, setOpenMenu }}>{children}</Context.Provider>;
