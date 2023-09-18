@@ -4,7 +4,7 @@ import CheckBox from "../CheckBox";
 import TopicContainer from "../TopicContainer";
 
 import { useContext } from "react";
-import { Context } from "./Provider";
+import { Context } from "../Provider";
 import { Chapter } from "./Chapter";
 import { courseData } from "../course";
 

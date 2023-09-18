@@ -1,7 +1,7 @@
 "use client";
 import { FaAngleDown } from "react-icons/fa";
 import { useContext } from "react";
-import { Context } from "./Provider";
+import { Context } from "../Provider";
 export const OpenMenu = () => {
   const { setOpenMenu } = useContext(Context);
   const handleClick = () => {
