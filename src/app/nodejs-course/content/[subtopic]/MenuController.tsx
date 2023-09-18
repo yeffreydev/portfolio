@@ -1,6 +1,6 @@
 "use client";
 import { FaAngleDown } from "react-icons/fa";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../Provider";
 export const OpenMenu = () => {
   const { setOpenMenu } = useContext(Context);
@@ -16,6 +16,9 @@ export const OpenMenu = () => {
 
 export const CloseMenuHook = () => {
   const { setOpenMenu } = useContext(Context);
-  setOpenMenu(false);
+  useEffect(() => {
+    setOpenMenu(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return null;
 };
