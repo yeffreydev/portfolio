@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 interface DetailsI {
   title: string;
@@ -39,7 +39,12 @@ const CourseDetails = () => {
   return (
     <div className="w-11/12 mx-auto mt-20">
       <h1 className="text-2xl font-semibold">Más Detalles del Curso</h1>
-      <p>puedes ver el contendio del curso <Link className="underline font-semibold" href="/nodejs-course/content">Aquí</Link> </p>
+      <p>
+        puedes iniciar a ver el contenido del curso aquí{" "}
+        <Link className="underline font-semibold" href="/nodejs-course/content">
+          Aquí
+        </Link>{" "}
+      </p>
       <div className="w-11/12 mx-auto mt-5 flex flex-col gap-5">
         {detailsData.map((item, index) => {
           return <DetailsItem key={index} title={item.title} description={item.description} />;
