@@ -136,6 +136,12 @@ export const courseData: ICourse = {
               content: "",
               link: "https://drive.google.com/file/d/1GWpf4DpUyicxuLuJujRaubz1gBGkZOMX/view?usp=drive_link",
             },
+	    {
+		    slug: "dom-part-2",
+		    title: "DOM parte 2",
+		    content: "",
+		    link: 'https://drive.google.com/file/d/13D1VB1x3QKa1hUQfJlsyv4PzA7BlXJ6i/view?usp=sharing'
+	    }
           ],
         },
       ],
