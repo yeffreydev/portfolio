@@ -6,7 +6,7 @@ const CourseContentPage = () => {
   if (firstSubTopic) {
     redirect(`/nodejs-course/content/${firstSubTopic.slug}`);
   }
-  return <div></div>;
+  return null;
 };
 
 export default CourseContentPage;

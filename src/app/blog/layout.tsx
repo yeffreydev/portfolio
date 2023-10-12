@@ -9,11 +9,11 @@ export const metadata = {
 };
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <html lang="es">
       <body className="mt-[80px] mb-[40px]">
         <Header />
         {children}
       </body>
-    </>
+    </html>
   );
 }

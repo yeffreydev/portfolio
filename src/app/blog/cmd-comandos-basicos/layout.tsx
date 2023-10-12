@@ -8,12 +8,5 @@ export const metadata = {
   keywords: "cmd, comandos",
 };
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="es">
-      <body>
-        <Header />
-        <div className="w-11/12 mx-auto mt-[80px]">{children}</div>
-      </body>
-    </html>
-  );
+  return <div className="w-11/12 mx-auto mt-[80px]">{children}</div>;
 }
