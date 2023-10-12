@@ -18,16 +18,17 @@ const Item = ({ src, name, price }: { src: string; name: string; price: number }
 
 function page() {
   return (
-    <div className="mt-[80px] mb-[40px] w-11/12 mx-auto flex gap-3">
+    <div className="flex gap-3 w-11/12 mx-auto">
       <div className="flex-1">
         <h1 className="text-xl font-bold pl-2">latest articles</h1>
-        <div className="flex-1">{/* <BlogItem id="ensayo-comu-3" title="La influencia de la educación en la corrupción" year="2023" /> */}</div>
+        <div className="flex-1">
+          <BlogItem id="cmd-comandos-basicos" title="CMD Comandos Básicos - Windows CMD" year="2023" />
+        </div>
       </div>
 
       <div className="w-[300px] hidden md:block">
         <h2 className="my-3 text-2xl w-11/12 mx-auto">Last Posts</h2>
-        <div className="flex flex-col gap-5 items-center">
-        </div>
+        <div className="flex flex-col gap-5 items-center"></div>
       </div>
     </div>
   );

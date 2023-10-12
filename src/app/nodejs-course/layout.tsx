@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 const NodejsCourseLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <html lang="es">
-      <div>
+      <body>
         <Header />
         <ContentContainer>{children}</ContentContainer>
-      </div>
+      </body>
     </html>
   );
 };
