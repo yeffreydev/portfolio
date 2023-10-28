@@ -1,7 +1,7 @@
 "use client";
 import { LegacyRef, MouseEventHandler, useContext, useEffect, useRef, useState } from "react";
 // import logo from "./../../public/white_logo.svg";
-import darkLogo from "./../../public/dark_logo.svg";
+import logo from "./../../public/logo.svg";
 import Image from "next/image";
 import { IconType } from "react-icons";
 import { FiSun, FiMoon, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
@@ -73,16 +73,6 @@ const ThemeButtton = () => {
   );
 };
 
-const LangButton = () => {
-  return (
-    <button className="hidden md:flex gap-1 bg-black px-2 py-1 items-center">
-      <span>EN</span>
-      <Image width={20} height={20} src="https://cdn-icons-png.flaticon.com/128/197/197374.png" alt="UK Flag" />
-      {/* <Image width={20} height={20} src="https://cdn-icons-png.flaticon.com/128/197/197593.png" alt="UK Flag" /> */}
-    </button>
-  );
-};
-
 const MenuButton = ({ toggle, isOpen }: { toggle: MouseEventHandler<HTMLButtonElement>; isOpen: boolean }) => {
   return (
     <button onClick={toggle} className={`absolute  md:hidden transition-all duration-200 ease-in-out ${isOpen ? "opacity-0" : "opacity-100"}`}>
@@ -142,14 +132,14 @@ export default function Header() {
 
   return (
     <div
-      className={`items-center border-b border-[#383c3c] border-opacity-5 w-full z-10 bg-[#383c3c] fixed top-0 flex h-[65px] transition-[top] duration-200 ease-out ${
+      className={`items-center border-b border-[#383c3c] border-opacity-5 w-full z-10 bg-[#232424] fixed top-0 flex h-[65px] transition-[top] duration-200 ease-out ${
         navColur && "bg-opacity-30 backdrop-filter backdrop-blur-md  shadow-lg"
       }`}
     >
       <div className="flex justify-between px-2 items-center mx-auto md:w-11/12 w-full">
         <div className="max-w-[70px]">
           <Link href="/" className="h-[49px] max-w-[69px] grid place-items-center">
-            <Image className=" top-0 lef-0  w-[68px] h-[49px]" src={darkLogo} alt="logo yeffrey dev" />
+            <Image className=" top-0 lef-0  w-[68px] h-[49px]" src={logo} alt="logo yeffrey dev" />
           </Link>
         </div>
         <NavBar />

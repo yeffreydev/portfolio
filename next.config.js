@@ -17,9 +17,6 @@ const nextConfig = {
       { protocol: "https", hostname: "th.bing.com", port: "", pathname: "/**" },
     ],
   },
-  experimental: {
-    appDir: true,
-  },
 };
 
 module.exports = nextConfig;
