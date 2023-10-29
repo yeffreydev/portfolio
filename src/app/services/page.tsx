@@ -7,9 +7,9 @@ function ServicesPage() {
       </div>
       <div className="mt-3">
         <p className="w-11/12 md:w-8/12 lg:w-6/12">
-          Explora nuestras soluciones de diseño web y promoción de productos. Ofrecemos una amplia variedad de plantillas web versátiles para tu proyecto en línea. Además, destacamos la plantilla
+          {` Explora nuestras soluciones de diseño web y promoción de productos. Ofrecemos una amplia variedad de plantillas web versátiles para tu proyecto en línea. Además, destacamos la plantilla
           "Catálogo de Productos" para resaltar tus productos de manera atractiva. Simplifica tu presencia en línea y promoción de productos con nuestros servicios. ¡Inicia tu proyecto hoy mismo y
-          destaca en la web!
+          destaca en la web!`}
         </p>
       </div>
       <div className="flex flex-col md:flex-row mt-3 gap-3">
