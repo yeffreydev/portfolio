@@ -52,7 +52,7 @@ const NavBarMobile = ({ isOpen, myRef, click }: { isOpen: boolean; myRef: Legacy
       ref={myRef}
       className={`${
         isOpen ? "w-full" : "w-0"
-      } flex max-w-[300px] overflow-hidden right-0 transition-all duration-200 bg-[#383c3c] backdrop-filter backdrop-blur-md shadow-sm bg-opacity-90 h-[calc(100vh-65px)] md:hidden  flex-col fixed z-10 top-[65px] `}
+      } flex max-w-[300px] overflow-hidden right-0 transition-all duration-200 bg-[#232424] backdrop-filter backdrop-blur-md shadow-sm bg-opacity-90 h-[calc(100vh-65px)] md:hidden  flex-col fixed z-10 top-[65px] `}
     >
       {/* <NavBarItemMobile click={click} title="Dark" Icon={FiMoon} /> */}
       {/* <NavBarItemMobile click={click} title="EN" imgSrc="https://cdn-icons-png.flaticon.com/128/197/197374.png" /> */}
