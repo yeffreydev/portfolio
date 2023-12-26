@@ -31,7 +31,7 @@ export default function TopInfo() {
         </div>
       </div>
       <div className="mt-2 md:mt-0 flex justify-center md:justify-end gap-2">
-        <Link target="_blank" href={"https://chat.whatsapp.com/HsA13xs8kIhIsEOOINVDrH"} className="bg-cyan-600 p-2 rounded-xl">
+        <Link target="_blank" href={"https://chat.whatsapp.com/HsA13xs8kIhIsEOOINVDrH"} className="bg-[#8d8] text-black font-semibold p-2 rounded-xl">
           Whatsapp Room
         </Link>
       </div>

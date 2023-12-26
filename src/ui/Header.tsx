@@ -1,12 +1,10 @@
 "use client";
-import { LegacyRef, MouseEventHandler, useContext, useEffect, useRef, useState } from "react";
-// import logo from "./../../public/white_logo.svg";
+import { LegacyRef, MouseEventHandler, useEffect, useRef, useState } from "react";
 import logo from "./../../public/logo.svg";
 import Image from "next/image";
 import { IconType } from "react-icons";
-import { FiSun, FiMoon, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
+import { FiSun, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
-import { AppContext } from "@/app/AppProvider";
 
 const NavBarItem = ({ link, title }: { link?: string; title?: string; Icon?: IconType }) => {
   return (
@@ -37,11 +35,11 @@ const NavBar = () => {
   return (
     <nav className="pr-3 hidden md:block">
       <ul className="flex  w-ful justify-end gap-5 md:gap-10">
-        <NavBarItem link="/" title="Home" />
-        {/* <NavBarItem link="/projects" title="Projects" /> */}
-        <NavBarItem link="/services" title="Services" />
+        <NavBarItem link="/services" title="Servicios" />
+        <NavBarItem link="/templates" title="Plantillas" />
+        <NavBarItem link="/projects" title="Proyectos" />
         <NavBarItem link="/blog" title="Blog" />
-        <NavBarItem link="/nodejs-course" title="NodeJS Course" />
+        <NavBarItem link="/about" title="Acerca de Mí" />
       </ul>
     </nav>
   );
@@ -54,8 +52,6 @@ const NavBarMobile = ({ isOpen, myRef, click }: { isOpen: boolean; myRef: Legacy
         isOpen ? "w-full" : "w-0"
       } flex max-w-[300px] overflow-hidden right-0 transition-all duration-200 bg-[#232424] backdrop-filter backdrop-blur-md shadow-sm bg-opacity-90 h-[calc(100vh-65px)] md:hidden  flex-col fixed z-10 top-[65px] `}
     >
-      {/* <NavBarItemMobile click={click} title="Dark" Icon={FiMoon} /> */}
-      {/* <NavBarItemMobile click={click} title="EN" imgSrc="https://cdn-icons-png.flaticon.com/128/197/197374.png" /> */}
       <NavBarItemMobile click={click} link="/" title="Home" />
       {/* <NavBarItemMobile click={click} link="/projects" title="Projects" /> */}
       <NavBarItemMobile click={click} link="/services" title="Services" />
@@ -88,16 +84,6 @@ const MenuButtonX = ({ toggle, isOpen }: { toggle: MouseEventHandler<HTMLButtonE
   );
 };
 
-const CartButton = () => {
-  const { cart } = useContext(AppContext);
-  const count = cart.reduce((acc, curr) => acc + curr.count, 0);
-  return (
-    <Link className="relative" href={"/cart"}>
-      {count > 0 && <span className="text-red-500 absolute text-sm font-bold top-[-13px] right-[-8px]">{count > 8 ? "+9" : count}</span>}
-      <FiShoppingCart className="text-2xl" />
-    </Link>
-  );
-};
 export default function Header() {
   const [navColur, setNavColour] = useState(false);
   const [activeNav, setActiveNav] = useState(false);
@@ -145,9 +131,6 @@ export default function Header() {
         <NavBar />
         <NavBarMobile click={closeNav} myRef={navRef} isOpen={activeNav} />
         <div className="flex gap-5 items-center">
-          {/* <ThemeButtton /> */}
-          {/* <LangButton /> */}
-          {/* <CartButton /> */}
           <div ref={menuIconContainerRef} className="relative  w-[30px] h-[30px] md:hidden grid place-items-center">
             <MenuButton isOpen={activeNav} toggle={handleToggleNav} />
             <MenuButtonX isOpen={activeNav} toggle={handleToggleNav} />

@@ -1,10 +1,9 @@
 "use client";
 import { LegacyRef, MouseEventHandler, useContext, useEffect, useRef, useState } from "react";
-// import logo from "./../../public/white_logo.svg";
 import darkLogo from "./../../public/dark_logo.svg";
 import Image from "next/image";
 import { IconType } from "react-icons";
-import { FiSun, FiMoon, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
+import { FiSun, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { AppContext } from "@/app/AppProvider";
 
