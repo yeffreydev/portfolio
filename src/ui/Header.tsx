@@ -35,11 +35,9 @@ const NavBar = () => {
   return (
     <nav className="pr-3 hidden md:block">
       <ul className="flex  w-ful justify-end gap-5 md:gap-10">
-        <NavBarItem link="/services" title="Servicios" />
         <NavBarItem link="/templates" title="Plantillas" />
         <NavBarItem link="/projects" title="Proyectos" />
         <NavBarItem link="/blog" title="Blog" />
-        <NavBarItem link="/about" title="Acerca de Mí" />
       </ul>
     </nav>
   );
@@ -52,11 +50,9 @@ const NavBarMobile = ({ isOpen, myRef, click }: { isOpen: boolean; myRef: Legacy
         isOpen ? "w-full" : "w-0"
       } flex max-w-[300px] overflow-hidden right-0 transition-all duration-200 bg-[#232424] backdrop-filter backdrop-blur-md shadow-sm bg-opacity-90 h-[calc(100vh-65px)] md:hidden  flex-col fixed z-10 top-[65px] `}
     >
-      <NavBarItemMobile click={click} link="/" title="Home" />
-      {/* <NavBarItemMobile click={click} link="/projects" title="Projects" /> */}
-      <NavBarItemMobile click={click} link="/services" title="Services" />
+      <NavBarItem link="/templates" title="Plantillas" />
+      <NavBarItemMobile click={click} link="/projects" title="Projects" />
       <NavBarItemMobile click={click} link="/blog" title="Blog" />
-      <NavBarItemMobile click={click} link="/nodejs-course" title="NodeJS Course" />
     </ul>
   );
 };
