@@ -4,20 +4,25 @@ import ProjectItem from "./ProjectItem";
 const projects = [
   {
     title: "Pomodoro and Timer App",
+    features: [],
     description: `This project was developed using only HTML, CSS, and JavaScript. It is a simple app with basic pomodoro and timer functionality that I built to practice my skills.`,
     deployLink: "https://yeffreydev.github.io/timer-and-pomo-app/",
     codeLink: "https://github.com/yeffreydev/timer-and-pomo-app",
     image: "/projects/timer-and-pomo.png",
+    images: [],
   },
   {
-    title: "Soccer App",
-    description: ` I developed this app to practice my backend skills, data structure, and real-time connections. This project was developed with NextJs for the frontend and NodeJs with Typescript for the backend. I used Socket.io for real-time connections and MongoDB for the database.`,
-    deployLink: "https://bb200-client.vercel.app/app",
+    title: "Catalo de Productos",
+    description:
+      "Este proyecto ha sido creado para tener un catalago de productos simple, con una interfaz agradable y limpia, y que puedas iniciar tu emprendimiento de tienda digital desde ahora gracias a que puedes iniciar solo con un whatsapp y sin más cosas complejas, el usuario podra enviarte un mensaje de los productos que desea, también tiene un sistema de carrito que facilitara al usuario gestionar sus compras.",
+    features: [],
+    deployLink: "https://fillbox.shop",
     codeLink: "",
-    image: "/projects/soccer-app.png",
+    image: "/projects/cat-products.png",
   },
   {
     title: "Gest Fina",
+    features: [],
     description: `
     University Project: A fundamental Android app, developed with React Native, for managing finances. It allows transaction editing and real-time balance monitoring.
     `,
